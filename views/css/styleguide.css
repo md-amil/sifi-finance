@@ -1,0 +1,91 @@
+:root { 
+  --black: #000000;
+  --daintree: #002628;
+  --eerie-black-22: #1e1e1e45;
+  --eerie-black2: #191919;
+  --green-white: #ececdd;
+  --sazerac: #fdf5e0;
+  --storm-dust: #616161;
+  --violet-red: #f82c85;
+  --violet-red-2: #f82c8563;
+  --white: #ffffff;
+ 
+  --font-size-m: 21px;
+  --font-size-s: 16px;
+  --font-size-xl2: 24px;
+  --font-size-xs: 12px;
+  --font-size-xxl2: 30px;
+  --font-size-xxxl: 60px;
+  --font-size-xxxl2: 50px;
+ 
+  --font-family-inter: "Inter", Helvetica;
+  --font-family-noto_sans: "Noto Sans", Helvetica;
+  --font-family-raleway: "Raleway", Helvetica;
+}
+.raleway-semi-bold-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-raleway);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.inter-semi-bold-eerie-black-16px {
+  color: var(--eerie-black2);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.raleway-semi-bold-violet-red-16px {
+  color: var(--violet-red);
+  font-family: var(--font-family-raleway);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.notosans-normal-black-21px {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.inter-semi-bold-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.raleway-normal-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-raleway);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.raleway-normal-storm-dust-12px {
+  color: var(--storm-dust);
+  font-family: var(--font-family-raleway);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.raleway-normal-black-21px {
+  color: var(--black);
+  font-family: var(--font-family-raleway);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.border-1px-violet-red-2 {
+  border: 1px solid var(--violet-red-2);
+}

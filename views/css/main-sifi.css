@@ -1,0 +1,517 @@
+/* screen - main-sifi */
+
+.main-sifi {
+  align-items: flex-start;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 1663px;
+  width: 1280px;
+}
+
+.main-sifi .overlap-group4 {
+  height: 720px;
+  position: relative;
+  width: 1280px;
+}
+
+.main-sifi .button {
+  align-items: flex-start;
+  display: flex;
+  height: 48px;
+  left: 1021px;
+  position: absolute;
+  top: 22px;
+  width: 160px;
+}
+
+.main-sifi .base-button {
+  align-items: flex-start;
+  background-color: var(--violet-red);
+  border-radius: 100px;
+  display: flex;
+  height: 48px;
+  overflow: hidden;
+  padding: 11px 21px;
+  width: 160px;
+}
+
+.main-sifi .button_text {
+  letter-spacing: 0;
+  line-height: 24px;
+  min-height: 24px;
+  min-width: 118px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.main-sifi .group-23 {
+  align-items: flex-end;
+  background-color: var(--sazerac);
+  display: flex;
+  height: 720px;
+  left: 0;
+  min-width: 1280px;
+  padding: 101px 95px;
+  position: absolute;
+  top: 0;
+}
+
+.main-sifi .group-15 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 459px;
+  width: 535px;
+}
+
+.main-sifi .group-14 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  min-height: 304px;
+  width: 539px;
+}
+
+.main-sifi .easiest-way-to-invest-in-crypto {
+  color: var(--daintree);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-xxxl);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 70px;
+  min-height: 140px;
+}
+
+.main-sifi .instantly-invest-in {
+  color: var(--black);
+  font-family: var(--font-family-raleway);
+  font-size: var(--font-size-xxl2);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 45px;
+  margin-left: 1px;
+  margin-top: 29px;
+  min-height: 135px;
+  width: 534px;
+}
+
+.main-sifi .frame-container {
+  height: 95px;
+  margin-left: 3px;
+  margin-top: 60px;
+  position: relative;
+  width: 269px;
+}
+
+.main-sifi .frame-7 {
+  align-items: flex-start;
+  background-color: var(--violet-red-2);
+  border-radius: 20px;
+  display: flex;
+  height: 73px;
+  left: 21px;
+  min-width: 248px;
+  padding: 21.0px 69px;
+  position: absolute;
+  top: 22px;
+}
+
+.main-sifi .join-now {
+  align-self: center;
+  letter-spacing: 0;
+  margin-bottom: 2.0px;
+  min-height: 19px;
+  min-width: 70px;
+}
+
+.main-sifi .biarrow-right {
+  height: 30px;
+  margin-left: 10px;
+  width: 30px;
+}
+
+.main-sifi .frame-5 {
+  align-items: flex-start;
+  background-color: var(--violet-red);
+  border-radius: 20px;
+  display: flex;
+  height: 73px;
+  left: 0;
+  min-width: 248px;
+  padding: 21.0px 29px;
+  position: absolute;
+  top: 0;
+}
+
+.main-sifi .private-sale-live {
+  align-self: center;
+  letter-spacing: 0;
+  margin-bottom: 2.0px;
+  min-height: 19px;
+  min-width: 150px;
+}
+
+.main-sifi .overlap-group1 {
+  height: 420px;
+  margin-bottom: 21.49px;
+  margin-left: 86px;
+  position: relative;
+  width: 465px;
+}
+
+.main-sifi .ellipse-5 {
+  background-color: #1919191f;
+  border-radius: 196.94px/191.31px;
+  filter: blur(60px);;
+  height: 383px;
+  left: 54px;
+  position: absolute;
+  top: 37px;
+  width: 394px;
+}
+
+.main-sifi .ellipse-1 {
+  height: 383px;
+  left: 71px;
+  position: absolute;
+  top: 13px;
+  width: 394px;
+}
+
+.main-sifi .group-1 {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  min-height: 381px;
+  position: absolute;
+  top: 20px;
+  width: 165px;
+}
+
+.main-sifi .ellipse-7 {
+  background-color: var(--eerie-black-22);
+  border-radius: 32.82px/31.89px;
+  filter: blur(50px);;
+  height: 64px;
+  margin-right: 0;
+  width: 66px;
+}
+
+.main-sifi .ellipse-5-1 {
+  align-self: flex-start;
+  background-color: var(--eerie-black-22);
+  border-radius: 43.76px/42.51px;
+  filter: blur(50px);;
+  height: 85px;
+  margin-top: 73px;
+  width: 88px;
+}
+
+.main-sifi .ellipse-6 {
+  background-color: var(--eerie-black-22);
+  border-radius: 40.12px/38.97px;
+  filter: blur(50px);;
+  height: 78px;
+  margin-right: 14.59px;
+  margin-top: 81px;
+  width: 80px;
+}
+
+.main-sifi .ellipse-2 {
+  height: 95px;
+  left: 15px;
+  position: absolute;
+  top: 136px;
+  width: 98px;
+}
+
+.main-sifi .ellipse-3 {
+  height: 88px;
+  left: 85px;
+  position: absolute;
+  top: 302px;
+  width: 90px;
+}
+
+.main-sifi .ellipse-4 {
+  height: 74px;
+  left: 114px;
+  position: absolute;
+  top: 0;
+  width: 76px;
+}
+
+.main-sifi .si-fi-finance {
+  left: 98px;
+  letter-spacing: 0;
+  position: absolute;
+  top: 26px;
+}
+
+.main-sifi .overlap-group3 {
+  align-items: center;
+  background-color: var(--green-white);
+  display: flex;
+  flex-direction: column;
+  min-height: 943px;
+  padding: 99px 370px;
+  width: 1280px;
+}
+
+.main-sifi .participate-in-the-s {
+  align-self: flex-start;
+  color: var(--daintree);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-xxxl2);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 61px;
+  min-height: 122px;
+  min-width: 539px;
+  text-align: center;
+}
+
+.main-sifi .group-9 {
+  align-items: flex-start;
+  display: flex;
+  margin-top: 48px;
+  min-width: 524px;
+}
+
+.main-sifi .dropdown-selector {
+  align-items: flex-start;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0px 0px 0px #2121120f , 0px 4px 8px #2121120f , 0px 15px 15px #2121120d , 0px 33px 20px #21211208 , 0px 58px 23px #21211203 , 0px 91px 25px transparent;
+  display: flex;
+  height: 50px;
+  justify-content: flex-end;
+  min-width: 325px;
+  padding: 10.8px 9.7px;
+}
+
+.main-sifi .overlap-group1-1 {
+  height: 28px;
+  position: relative;
+  width: 295px;
+}
+
+.main-sifi .chevron-down {
+  align-items: flex-start;
+  display: flex;
+  height: 28px;
+  left: 267px;
+  min-width: 28px;
+  padding: 8px 5px;
+  position: absolute;
+  top: 0;
+}
+
+.main-sifi .icon {
+  height: 1px;
+  width: 1px;
+}
+
+.main-sifi .label {
+  height: 18px;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 18px;
+  position: absolute;
+  top: 4px;
+  white-space: nowrap;
+  width: 285px;
+}
+
+.main-sifi .frame-container-1 {
+  height: 62px;
+  margin-left: 13px;
+  position: relative;
+  width: 186px;
+}
+
+.main-sifi .frame-7-1 {
+  align-items: center;
+  background-color: var(--violet-red-2);
+  border-radius: 20px;
+  display: flex;
+  height: 48px;
+  left: 35px;
+  min-width: 151px;
+  padding: 0 20.5px;
+  position: absolute;
+  top: 14px;
+}
+
+.main-sifi .join-now-1 {
+  letter-spacing: 0;
+  margin-bottom: 2.0px;
+  min-height: 19px;
+  min-width: 70px;
+}
+
+.main-sifi .frame-5-1 {
+  align-items: center;
+  background-color: var(--violet-red);
+  border-radius: 8px 8px 8px 20px;
+  display: flex;
+  height: 50px;
+  left: 0;
+  min-width: 178px;
+  padding: 0 30px;
+  position: absolute;
+  top: 0;
+}
+
+.main-sifi .buy-now {
+  letter-spacing: 0;
+  margin-bottom: 2.0px;
+  min-height: 19px;
+  min-width: 78px;
+}
+
+.main-sifi .group-19 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.0px;
+  margin-top: 14px;
+  min-height: 74px;
+  width: 479px;
+}
+
+.main-sifi .frame-8 {
+  align-items: flex-start;
+  border-radius: 8px;
+  display: flex;
+  height: 46px;
+  justify-content: flex-end;
+  margin-left: 2px;
+  min-width: 470px;
+  padding: 7px 24px;
+}
+
+.main-sifi .to-pay-2356-bnb {
+  color: transparent;
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-m);
+  font-weight: 400;
+  letter-spacing: 0;
+  min-height: 29px;
+  min-width: 178px;
+}
+
+.main-sifi .span1 {
+  color: var(--violet-red);
+  text-decoration: underline;
+}
+
+.main-sifi .you-get-435684-sifi {
+  letter-spacing: 0;
+  margin-left: 42px;
+  min-height: 29px;
+}
+
+.main-sifi .web3-wallet-not-con {
+  letter-spacing: 0;
+  margin-top: 14px;
+  min-height: 14px;
+}
+
+.main-sifi .group-10 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.0px;
+  margin-top: 86px;
+  min-height: 333px;
+  width: 523px;
+}
+
+.main-sifi .overlap-group2 {
+  height: 104px;
+  margin-left: 12px;
+  position: relative;
+  width: 236px;
+}
+
+.main-sifi .current-rate-1-sifi-00125-usdt {
+  color: var(--black);
+  font-family: var(--font-family-noto_sans);
+  font-size: var(--font-size-xl2);
+  font-weight: 700;
+  left: 0;
+  letter-spacing: 0;
+  position: absolute;
+  top: 0;
+}
+
+.main-sifi .button-1 {
+  align-items: flex-start;
+  display: flex;
+  height: 48px;
+  left: 3px;
+  min-width: 174px;
+  position: absolute;
+  top: 56px;
+}
+
+.main-sifi .base-button-1 {
+  align-items: flex-start;
+  border-radius: 100px;
+  display: flex;
+  height: 48px;
+  min-width: 174px;
+  padding: 11.2px 0;
+}
+
+.main-sifi .button_text-1 {
+  letter-spacing: 0;
+  line-height: 24px;
+  min-height: 24px;
+  min-width: 142px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.main-sifi .overlap-group {
+  align-self: center;
+  height: 24px;
+  margin-left: 8px;
+  position: relative;
+  width: 24px;
+}
+
+.main-sifi .spinner-loader {
+  align-items: flex-end;
+  display: flex;
+  height: 24px;
+  justify-content: flex-end;
+  left: 0;
+  min-width: 24px;
+  padding: 11.2px 11.3px;
+  position: absolute;
+  top: 0;
+}
+
+.main-sifi .spinner {
+  height: 1px;
+  width: 1px;
+}
+
+.main-sifi .arrow-right {
+  height: 24px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 24px;
+}
+
+.main-sifi .minimum-buy-125-usd {
+  height: 215px;
+  letter-spacing: 0;
+  line-height: 35px;
+  margin-top: 14px;
+}
