@@ -7,6 +7,7 @@
   --sazerac: #fdf5e0;
   --storm-dust: #616161;
   --violet-red: #f82c85;
+  --primary-color: #f82c85;
   --violet-red-2: #f82c8563;
   --white: #ffffff;
  
@@ -17,8 +18,6 @@
   --font-size-xxl2: 30px;
   --font-size-xxxl: 60px;
   --font-size-xxxl2: 50px;
- 
-  --font-family-inter: "Inter", Helvetica;
   --font-family-noto_sans: "Noto Sans", Helvetica;
   --font-family-raleway: "Raleway", Helvetica;
 }
@@ -87,5 +86,5 @@
 }
 
 .border-1px-violet-red-2 {
-  border: 1px solid var(--violet-red-2);
+  border: 1px dashed var(--violet-red-2);
 }

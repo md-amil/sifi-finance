@@ -1,0 +1,72 @@
+/* mobile css START herer =====================================*/
+@media (max-width: 767px) {
+    .main-sifi .group-23 {
+        align-items: flex-end;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+}
+.overlap-group1 > img {
+    width: 80%;
+    margin: 0 auto !important;
+    display: block;
+    position: relative;
+    left: 47px;
+}
+.background-shape-bottom {
+    position: absolute;
+    top: -40px;
+    width: 100%;
+}
+.token-item-groups {
+    width: 100% !important;
+}
+.main-sifi .group-9 {
+    margin-left: 10px;
+    flex-direction: column;
+}
+:root {
+    --font-size-xxxl2: 40px;
+}
+.main-sifi .frame-8 {
+    align-items: flex-start;
+    border-radius: 8px;
+    display: flex;
+    height: inherit;
+    justify-content: flex-start;
+    margin-left: 2px;
+    min-width: initial;
+    padding: 15px 24px;
+    flex-direction: column;
+    width: 100%;
+}
+.main-sifi .you-get-435684-sifi {
+  
+   margin-left: 0;
+}
+.main-sifi .group-15, .main-sifi .group-14 {
+    width: 100%;
+}
+.main-sifi .overlap-group1 {
+    height: initial !important;
+}
+.main-sifi .frame-container-1,.main-sifi .frame-5-1, .main-sifi .dropdown-selector {
+    width: 100%;
+}
+.main-sifi .frame-container-1 {
+    margin-left: 0;
+    width: 94%;
+}
+.main-sifi .group-10 ,.main-sifi .group-19, .main-sifi .group-9{
+    width: 100%;
+}
+.group-19{
+    right: 5px !important;
+}
+
+.spacer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+}

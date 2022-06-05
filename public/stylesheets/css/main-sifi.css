@@ -5,25 +5,16 @@
   background-color: var(--white);
   display: flex;
   flex-direction: column;
-  height: 1663px;
-  width: 1280px;
+  height: 100%;
+  width: 100%;
 }
 
 .main-sifi .overlap-group4 {
   height: 720px;
   position: relative;
-  width: 1280px;
+  width: 100%;
 }
 
-.main-sifi .button {
-  align-items: flex-start;
-  display: flex;
-  height: 48px;
-  left: 1021px;
-  position: absolute;
-  top: 22px;
-  width: 160px;
-}
 
 .main-sifi .base-button {
   align-items: flex-start;
@@ -47,14 +38,8 @@
 
 .main-sifi .group-23 {
   align-items: flex-end;
-  background-color: var(--sazerac);
   display: flex;
-  height: 720px;
-  left: 0;
-  min-width: 1280px;
-  padding: 101px 95px;
-  position: absolute;
-  top: 0;
+  width: 100%;
 }
 
 .main-sifi .group-15 {
@@ -86,14 +71,10 @@
 .main-sifi .instantly-invest-in {
   color: var(--black);
   font-family: var(--font-family-raleway);
-  font-size: var(--font-size-xxl2);
+  font-size: 24px;
   font-weight: 400;
-  letter-spacing: 0;
-  line-height: 45px;
   margin-left: 1px;
   margin-top: 29px;
-  min-height: 135px;
-  width: 534px;
 }
 
 .main-sifi .frame-container {
@@ -102,19 +83,6 @@
   margin-top: 60px;
   position: relative;
   width: 269px;
-}
-
-.main-sifi .frame-7 {
-  align-items: flex-start;
-  background-color: var(--violet-red-2);
-  border-radius: 20px;
-  display: flex;
-  height: 73px;
-  left: 21px;
-  min-width: 248px;
-  padding: 21.0px 69px;
-  position: absolute;
-  top: 22px;
 }
 
 .main-sifi .join-now {
@@ -129,12 +97,13 @@
   height: 30px;
   margin-left: 10px;
   width: 30px;
+  position: relative;
 }
 
 .main-sifi .frame-5 {
   align-items: flex-start;
   background-color: var(--violet-red);
-  border-radius: 20px;
+  border-radius: 20px 40px 20px 20px;
   display: flex;
   height: 73px;
   left: 0;
@@ -150,6 +119,10 @@
   margin-bottom: 2.0px;
   min-height: 19px;
   min-width: 150px;
+  position: relative;
+}
+.main-sifi .private-sale-live:hover {
+  cursor: pointer;
 }
 
 .main-sifi .overlap-group1 {
@@ -256,8 +229,7 @@
   display: flex;
   flex-direction: column;
   min-height: 943px;
-  padding: 99px 370px;
-  width: 1280px;
+  padding: 99px 370px;  
 }
 
 .main-sifi .participate-in-the-s {
@@ -266,10 +238,7 @@
   font-family: var(--font-family-noto_sans);
   font-size: var(--font-size-xxxl2);
   font-weight: 700;
-  letter-spacing: 0;
   line-height: 61px;
-  min-height: 122px;
-  min-width: 539px;
   text-align: center;
 }
 
@@ -277,7 +246,6 @@
   align-items: flex-start;
   display: flex;
   margin-top: 48px;
-  min-width: 524px;
 }
 
 .main-sifi .dropdown-selector {
@@ -289,9 +257,14 @@
   height: 50px;
   justify-content: flex-end;
   min-width: 325px;
-  padding: 10.8px 9.7px;
+  padding: 10.8px 15px;
+  border: none;
+  color: #f92c85;
 }
-
+.navbar-brand {
+  font-family: var(--font-family-noto_sans);
+  color: var(--primary-color) !important;
+}
 .main-sifi .overlap-group1-1 {
   height: 28px;
   position: relative;
@@ -376,10 +349,10 @@
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  margin-left: 1.0px;
-  margin-top: 14px;
-  min-height: 74px;
+  margin: 25px auto;
   width: 479px;
+  position: relative;
+  right: 10px;
 }
 
 .main-sifi .frame-8 {
@@ -432,7 +405,6 @@
 
 .main-sifi .overlap-group2 {
   height: 104px;
-  margin-left: 12px;
   position: relative;
   width: 236px;
 }
@@ -508,10 +480,16 @@
   top: 0;
   width: 24px;
 }
-
-.main-sifi .minimum-buy-125-usd {
-  height: 215px;
-  letter-spacing: 0;
-  line-height: 35px;
-  margin-top: 14px;
+.bullet-list {
+  padding-left: 20px;
+  margin-top: 20px;
+}
+.bullet-list li  {
+  font-size: 21px;
+  padding-top: 8px;
+        padding-bottom: 8px;
+}
+.background-shape-bottom {
+  position: absolute;
+  top: 0;
 }
