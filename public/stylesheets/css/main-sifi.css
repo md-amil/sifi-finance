@@ -246,6 +246,7 @@
   align-items: flex-start;
   display: flex;
   margin-top: 48px;
+  justify-content: center;
 }
 
 .main-sifi .dropdown-selector {
@@ -397,9 +398,7 @@
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  margin-right: 1.0px;
   margin-top: 86px;
-  min-height: 333px;
   width: 523px;
 }
 
@@ -492,4 +491,25 @@
 .background-shape-bottom {
   position: absolute;
   top: 0;
+}
+
+  
+  .btn-outline-primary {
+    border-color: var(--violet-red);
+    border-radius: 8px 8px 8px 20px;
+    padding: 10px 30px;
+    color: var(--violet-red);
+  }
+    
+  .btn-outline-primary:hover {
+    border-color: var(--violet-red);
+    background-color: var(--violet-red);
+    color: #fff;
+  }
+  .btn-outline-primary.disabled, .btn-outline-primary:disabled {
+    color: var(--violet-red);
+    background-color: transparent;
+}
+.inv-button {
+  display: flex;
 }
