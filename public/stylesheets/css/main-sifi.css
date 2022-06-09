@@ -246,6 +246,7 @@
   align-items: flex-start;
   display: flex;
   margin-top: 48px;
+  justify-content: center;
 }
 
 .main-sifi .dropdown-selector {
@@ -360,8 +361,8 @@
   border-radius: 8px;
   display: flex;
   height: 46px;
-  justify-content: flex-end;
-  margin-left: 2px;
+  justify-content: center;
+  margin-left: 20px;
   min-width: 470px;
   padding: 7px 24px;
 }
@@ -383,12 +384,13 @@
 
 .main-sifi .you-get-435684-sifi {
   letter-spacing: 0;
-  margin-left: 42px;
+  /* margin-left: 42px; */
   min-height: 29px;
 }
 
 .main-sifi .web3-wallet-not-con {
   letter-spacing: 0;
+  color:#f92c85;
   margin-top: 14px;
   min-height: 14px;
 }
@@ -397,16 +399,14 @@
   align-items: flex-start;
   display: flex;
   flex-direction: column;
-  margin-right: 1.0px;
   margin-top: 86px;
-  min-height: 333px;
   width: 523px;
 }
 
 .main-sifi .overlap-group2 {
   height: 104px;
   position: relative;
-  width: 236px;
+  width: 240px;
 }
 
 .main-sifi .current-rate-1-sifi-00125-usdt {
@@ -492,4 +492,25 @@
 .background-shape-bottom {
   position: absolute;
   top: 0;
+}
+
+  
+  .btn-outline-primary {
+    border-color: var(--violet-red);
+    border-radius: 8px 8px 8px 20px;
+    padding: 10px 30px;
+    color: var(--violet-red);
+  }
+    
+  .btn-outline-primary:hover {
+    border-color: var(--violet-red);
+    background-color: var(--violet-red);
+    color: #fff;
+  }
+  .btn-outline-primary.disabled, .btn-outline-primary:disabled {
+    color: var(--violet-red);
+    background-color: transparent;
+}
+.inv-button {
+  display: flex;
 }

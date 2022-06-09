@@ -68,5 +68,15 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
+  .navbar-light .navbar-toggler {
+    color: rgb(255 255 255);
+    border-color: rgba(0,0,0,.1);
+    background: #f82c85;
+    border: none;
+}
+.navbar-toggler-icon {
+  
+    filter: invert(1);
+}
 
 }
