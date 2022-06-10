@@ -114,11 +114,7 @@
 }
 
 .main-sifi .private-sale-live {
-  align-self: center;
-  letter-spacing: 0;
-  margin-bottom: 2.0px;
-  min-height: 19px;
-  min-width: 150px;
+  bottom: -4px;
   position: relative;
 }
 .main-sifi .private-sale-live:hover {
