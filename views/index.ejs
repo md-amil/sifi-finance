@@ -61,10 +61,6 @@
               
               <div class="frame-5 btn-shadow-h">
                 <div class="private-sale-live inter-semi-bold-white-16px">PRIVATE SALE LIVE</div>
-                <img
-                  class="biarrow-right"
-                  src="https://anima-uploads.s3.amazonaws.com/projects/629c4e52edc2c70ee79e9bd6/releases/629c4e61edc2c70ee79e9bd7/img/bi-arrow-right-3@2x.svg"
-                />
               </div>
             </div>
           </div>
@@ -142,14 +138,7 @@
               <div class="current-rate-1-sifi-00125-usdt">Current Rate<br />1 SIFI = 0.0125 USDT</div>
               <div class="button-1">
                 <div class="base-button-1 mt-3">
-                  <div class="button_text-1 raleway-semi-bold-violet-red-16px">Click to view Rates</div>
-                  <div class="overlap-group">
-                   
-                    <img
-                      class="arrow-right"
-                      src="https://anima-uploads.s3.amazonaws.com/projects/629c4e52edc2c70ee79e9bd6/releases/629c4e61edc2c70ee79e9bd7/img/arrow-right@2x.svg"
-                    />
-                  </div>
+                  <button class="button_text-1 btn btn-link raleway-semi-bold-violet-red-16px" data-toggle="modal" data-target="#modelId">Click to view Rates</button>
                 </div>
               </div>
             </div>
@@ -203,6 +192,48 @@
     </div>
   </div>
       
+  <!-- Modal -->
+  <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">SIFI Token rates for
+            Private Sale</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <table class="table table-striped">
+            <thead class="thead-dark">
+           <tr>
+             <th>SIFI Token Sold</th>
+             <th>Rate</th>
+           </tr>
+          </thead>
+           <tr>
+            <td>First 40 million</td>
+            <td>0.0125 USDT</td>
+           </tr>
+           <tr>
+            <td>Next 50 million</td>
+            <td>0.015 USDT</td>
+           </tr>
+           <tr>
+            <td>Next 50 million</td>
+            <td>0.0175 USDT</td>
+           </tr>
+           <tr>
+            <td>Next 50 million</td>
+            <td>0.02 USDT</td>
+           </tr>
+          
+          </table>
+        </div>
+     
+      </div>
+    </div>
+  </div>
    
     <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>

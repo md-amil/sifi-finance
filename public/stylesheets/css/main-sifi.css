@@ -401,7 +401,11 @@
   margin-top: 86px;
   width: 523px;
 }
-
+.table .thead-dark th {
+  color: #fff;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
 .main-sifi .overlap-group2 {
   height: 104px;
   position: relative;
