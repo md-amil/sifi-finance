@@ -372,6 +372,9 @@
   min-height: 29px;
   min-width: 178px;
 }
+#enable-busd:focus{
+    outline: none;
+}
 
 .main-sifi .span1 {
   color: var(--violet-red);

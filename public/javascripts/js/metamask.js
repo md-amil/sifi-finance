@@ -24,6 +24,11 @@ amountInput.addEventListener("input", () => {
 });
 getLinkBtn.addEventListener("click", () => {
 	addInput.value;
+	if (addInput.value == "") {
+		const l = `sifi.finance/referral?start=${walletAddress[0]}`;
+		link.innerText = l.slice(0, 42) + "...";
+		return;
+	}
 	const l = `sifi.finance/referral?start=${addInput.value}`;
 	link.innerText = l.slice(0, 42) + "...";
 });
@@ -40,9 +45,11 @@ async function enableBusd() {
 		const res = await busdContract.methods
 			.approve(TOKEN_ADDRESS, amount * 10 ** 8)
 			.send({ from: walletAddress[0] });
-		enableBusdBtn.disabled = true;
+		// enableBusdBtn.disabled = true;
 		enableBusdBtn.classList.add("btn-outline-primary");
+		enableBusdBtn.classList.remove("btn-primary");
 		swapBtn.classList.remove("btn-outline-primary");
+		swapBtn.classList.add("btn-primary");
 		swapBtn.disabled = false;
 	} catch (e) {
 		console.log(e);
@@ -52,7 +59,7 @@ async function enableBusd() {
 async function swap(provider) {
 	const privateSaleContract = new web3.eth.Contract(TOKEN_ABI, TOKEN_ADDRESS);
 	// const targetAddress = "0x0000000000000000000000000000000000000000";
-	console.log("buy ref", referralAddress);
+	// console.log("buy ref", referralAddress);
 	await privateSaleContract.methods
 		.buy(referralAddress || REFERRAL_ADDRESS, amountInput.value * 10 ** 8)
 		.send({
