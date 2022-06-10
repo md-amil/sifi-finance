@@ -38,9 +38,11 @@ async function enableBusd() {
 	console.log(busdContract);
 	try {
 		const res = await busdContract.methods
-			.approve(walletAddress[0], amount)
+			.approve(TOKEN_ADDRESS, amount * 10 ** 8)
 			.send({ from: walletAddress[0] });
 		enableBusdBtn.disabled = true;
+		enableBusdBtn.classList.add("btn-outline-primary");
+		swapBtn.classList.remove("btn-outline-primary");
 		swapBtn.disabled = false;
 	} catch (e) {
 		console.log(e);
