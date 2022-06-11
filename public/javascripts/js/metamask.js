@@ -47,7 +47,7 @@ async function enableBusd() {
 	console.log(busdContract);
 	try {
 		const res = await busdContract.methods
-			.approve(TOKEN_ADDRESS, amount * 10 ** 18)
+			.approve(TOKEN_ADDRESS, web3.utils.toWei(amount, "ether"))
 			.send({ from: walletAddress[0] });
 		// enableBusdBtn.disabled = true;
 		enableBusdBtn.classList.add("btn-outline-primary");
@@ -65,7 +65,10 @@ async function swap(provider) {
 	// const targetAddress = "0x0000000000000000000000000000000000000000";
 	// console.log("buy ref", referralAddress);
 	await privateSaleContract.methods
-		.buy(referralAddress || REFERRAL_ADDRESS, amountInput.value * 10 ** 18)
+		.buy(
+			referralAddress || REFERRAL_ADDRESS,
+			web3.utils.toWei(amountInput.value, "ether")
+		)
 		.send({
 			from: walletAddress[0],
 		});
