@@ -8,6 +8,25 @@ const TOKEN_ABI = [
 		anonymous: false,
 		inputs: [
 			{
+				indexed: true,
+				internalType: "address",
+				name: "user",
+				type: "address",
+			},
+			{
+				indexed: false,
+				internalType: "uint256",
+				name: "amount",
+				type: "uint256",
+			},
+		],
+		name: "Bought",
+		type: "event",
+	},
+	{
+		anonymous: false,
+		inputs: [
+			{
 				indexed: false,
 				internalType: "uint8",
 				name: "version",
@@ -708,5 +727,5 @@ const BUSD_ABI = [
 	},
 ];
 const BUSD_ADDRESS = "0x04757CA5A04940b7005eb4be08bD9E3a1DcE52F8";
-const TOKEN_ADDRESS = "0x157657c8a45b1D2B4319E81d9053536691A7e2a0";
+const TOKEN_ADDRESS = "0x26997a57E30a18a4660BbC0A900d1D262daba084";
 const REFERRAL_ADDRESS = "0x0000000000000000000000000000000000000000";

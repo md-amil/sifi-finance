@@ -9,6 +9,7 @@ const uGet = document.getElementById("u-get");
 const label = document.getElementById("connected-label");
 const enableBusdBtn = document.getElementById("enable-busd");
 let referralAddress;
+let generatedReferralLink;
 
 $(".inv-button").hide();
 connectBtn.addEventListener("click", () => connect());
@@ -25,13 +26,16 @@ amountInput.addEventListener("input", () => {
 getLinkBtn.addEventListener("click", () => {
 	addInput.value;
 	if (addInput.value == "") {
-		const l = `sifi.finance/referral?start=${walletAddress[0]}`;
-		link.innerText = l.slice(0, 42) + "...";
+		generatedReferralLink = `sifi.finance/referral?start=${walletAddress[0]}`;
+		link.innerText = generatedReferralLink.slice(0, 42) + "...";
 		return;
 	}
-	const l = `sifi.finance/referral?start=${addInput.value}`;
-	link.innerText = l.slice(0, 42) + "...";
+	generatedReferralLink = `sifi.finance/referral?start=${addInput.value}`;
+	link.innerText = generatedReferralLink.slice(0, 42) + "...";
 });
+copyLinkBtn.addEventListener("click", () =>
+	copyTextToClipboard(generatedReferralLink)
+);
 
 async function enableBusd() {
 	const amount = amountInput.value;
@@ -89,4 +93,43 @@ function setReferralAddress() {
 		console.log("reff", referralAddress);
 	}
 	// $("#referrer-address").html(referralAddress);
+}
+
+function fallbackCopyTextToClipboard(text) {
+	var textArea = document.createElement("textarea");
+	textArea.value = text;
+
+	// Avoid scrolling to bottom
+	textArea.style.top = "0";
+	textArea.style.left = "0";
+	textArea.style.position = "fixed";
+
+	document.body.appendChild(textArea);
+	textArea.focus();
+	textArea.select();
+
+	try {
+		var successful = document.execCommand("copy");
+		var msg = successful ? "successful" : "unsuccessful";
+		console.log("Fallback: Copying text command was " + msg);
+	} catch (err) {
+		console.error("Fallback: Oops, unable to copy", err);
+	}
+
+	document.body.removeChild(textArea);
+}
+
+function copyTextToClipboard(text) {
+	if (!navigator.clipboard) {
+		fallbackCopyTextToClipboard(text);
+		return;
+	}
+	navigator.clipboard.writeText(text).then(
+		function () {
+			console.log("Async: Copying to clipboard was successful!");
+		},
+		function (err) {
+			console.error("Async: Could not copy text: ", err);
+		}
+	);
 }
