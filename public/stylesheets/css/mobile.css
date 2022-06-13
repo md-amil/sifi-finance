@@ -74,9 +74,5 @@
     background: #f82c85;
     border: none;
 }
-.navbar-toggler-icon {
-  
-    filter: invert(1);
-}
 
 }
