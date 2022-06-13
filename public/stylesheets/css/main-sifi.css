@@ -517,3 +517,6 @@
 .inv-button {
   display: flex;
 }
+.navbar-light .navbar-toggler-icon {
+  background-image: url(../css/menu.svg)
+}
