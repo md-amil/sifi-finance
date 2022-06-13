@@ -210,7 +210,14 @@ router.get("/:referral?", function (req, res, next) {
 router.get("/api/get-referral", async function (req, res, next) {
 	// const userAddress = req.body.token;
 	const userAddress = req.query.id;
-	console.log("add", userAddress);
+	if (!userAddress)
+		return res.status(401).json({ message: "No user address provided" });
+	if (userAddress.length < 42)
+		return res
+			.status(401)
+			.json({ message: "please provide a valid user address" });
+
+	// console.log("add", userAddress);
 	const web3 = new Web3("https://bsc-dataseed1.ninicoin.io");
 	const privateContract = new web3.eth.Contract(
 		PRIVATE_SALE_ABI,
