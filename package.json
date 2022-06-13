@@ -16,6 +16,7 @@
     "http": "^0.0.1-security",
     "http-errors": "^2.0.0",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "web3": "^1.7.3"
   }
 }
