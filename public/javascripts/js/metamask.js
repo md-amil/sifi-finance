@@ -25,12 +25,14 @@ amountInput.addEventListener("input", () => {
 getLinkBtn.addEventListener("click", () => {
 	addInput.value;
 	if (addInput.value == "") {
-		generatedReferralLink = `sifi.finance/referral?start=${walletAddress[0]}`;
-		link.innerText = generatedReferralLink.slice(0, 42) + "...";
+		generatedReferralLink = `https://sifi.finance/referral?start=${walletAddress[0]}`;
+		// link.innerText = generatedReferralLink.slice(0, 42) + "...";
+		link.innerHTML = generatedReferralLink;
 		return;
 	}
-	generatedReferralLink = `sifi.finance/referral?start=${addInput.value}`;
-	link.innerText = generatedReferralLink.slice(0, 42) + "...";
+	generatedReferralLink = `https://sifi.finance/referral?start=${addInput.value}`;
+	// link.innerText = generatedReferralLink.slice(0, 42) + "...";
+	link.innerHTML = generatedReferralLink;
 });
 copyLinkBtn.addEventListener("click", () =>
 	copyTextToClipboard(generatedReferralLink)
