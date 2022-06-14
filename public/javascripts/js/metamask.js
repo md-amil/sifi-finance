@@ -6,7 +6,6 @@ const getLinkBtn = document.getElementById("get-link");
 const copyLinkBtn = document.getElementById("copy-link");
 const link = document.getElementById("link");
 const uGet = document.getElementById("u-get");
-const label = document.getElementById("connected-label");
 const enableBusdBtn = document.getElementById("enable-busd");
 let referralAddress;
 let generatedReferralLink;
