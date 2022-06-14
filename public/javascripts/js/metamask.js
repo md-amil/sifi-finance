@@ -63,8 +63,6 @@ async function enableBusd() {
 }
 async function swap(provider) {
 	const privateSaleContract = new web3.eth.Contract(TOKEN_ABI, TOKEN_ADDRESS);
-	// const targetAddress = "0x0000000000000000000000000000000000000000";
-	// console.log("buy ref", referralAddress);
 	await privateSaleContract.methods
 		.buy(
 			referralAddress || REFERRAL_ADDRESS,
