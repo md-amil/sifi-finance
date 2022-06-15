@@ -98,17 +98,20 @@ function setReferralAddress() {
 }
 
 function fallbackCopyTextToClipboard(text) {
-	var textArea = document.createElement("textarea");
-	textArea.value = text;
+	var input = document.createElement("input");
+	input.value = text;
 
 	// Avoid scrolling to bottom
-	textArea.style.top = "0";
-	textArea.style.left = "0";
-	textArea.style.position = "fixed";
+	// textArea.style.top = "0";
+	// textArea.style.left = "0";
+	// textArea.style.position = "fixed";
 
-	document.body.appendChild(textArea);
-	textArea.focus();
-	textArea.select();
+	document.body.appendChild(input);
+	input.select();
+	input.setSelectionRange(0, 99999);
+
+	input.focus();
+	input.select();
 
 	try {
 		var successful = document.execCommand("copy");
@@ -118,7 +121,7 @@ function fallbackCopyTextToClipboard(text) {
 		console.error("Fallback: Oops, unable to copy", err);
 	}
 
-	document.body.removeChild(textArea);
+	document.body.removeChild(input);
 }
 
 function copyTextToClipboard(text) {
