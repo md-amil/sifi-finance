@@ -520,3 +520,11 @@
 .navbar-light .navbar-toggler-icon {
   background-image: url(../css/menu.svg)
 }
+.modal-content {
+  border-radius: 15px;
+}
+.lgif {
+  width: 174px;
+        display: block;
+        margin: auto;
+}

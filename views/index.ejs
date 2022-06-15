@@ -118,7 +118,7 @@
                </div>
                <div class="inv-button text-center">
                 <button id = "enable-busd" class="btn btn-primary mr-3">Enable BUSD</button>
-                <button id = "swap"  class="btn btn-outline-primary " >Buy</button>
+                <button id = "swap"  class="btn btn-outline-primary " data-toggle="modal" data-target="#success">Buy</button>
               </div>
   
            
@@ -230,6 +230,39 @@
       </div>
     </div>
   </div>
+  <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="success" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content ">
+        
+        <div class="modal-body">
+          <div class="container-fluid text-center">
+            <img src="./img/success.gif" class="lgif" alt="">
+            <h3 style="font-weight: bolder; color: #00B41D;" >You have successfully bought 
+              <span style="color: #f82c85">50800 SiFi Tokens</span></h3>
+              <p class="lead mt-3">by spending <b>230 BUSD</b></p>
+              <p>
+                <a href="https://bscscan.com/tx/0xc350629d32d7cec830c17a8c1357e5ce04fd1268dc7604844bd706c19db90dd2" class="btn btn-link" style="color: #f82c85;">Transaction Link</a>
+               
+              </p>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    $('#exampleModal').on('show.bs.modal', event => {
+      var button = $(event.relatedTarget);
+      var modal = $(this);
+      // Use above variables to manipulate the DOM
+      
+    });
+  </script>
    
     <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -251,6 +284,21 @@
     <script type="text/javascript" src="/javascripts/js/contract.js"></script>
     <script type="text/javascript" src="/javascripts/js/connect.js"></script>
     <script type="text/javascript" src="/javascripts/js/metamask.js"></script>
+
+    <script>
+
+      $("#enable-busd").click(function(){
+        $(this).addClass('loader')
+        setTimeout(function(){
+          $("#enable-busd").removeClass("btn-primary");
+          $("#enable-busd").addClass("btn-outline-primary");
+          $("#enable-busd").removeClass("loader");
+          $("#enable-busd").prop('disabled', true); 
+          $("#swap").addClass("btn-primary");
+      }, 900);
+});
+
+    </script>
 </body>
 
 </html>
