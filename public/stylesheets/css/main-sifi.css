@@ -139,7 +139,25 @@
   top: 37px;
   width: 394px;
 }
-
+.trans-history {
+  list-style: none;
+  padding: 0;
+  border: 1px dashed #f82c83;
+  padding: 15px;
+  width: 100%;
+  border-radius: 8px;
+}
+.trans-history li {
+  padding: 7px 0;
+}
+.trans-history h4 {
+  font-weight: bold;
+  font-size: 16px;
+margin: 0;  
+}
+.trans-history .btn-link{
+  color: var(--violet-red);
+}
 .main-sifi .ellipse-1 {
   height: 383px;
   left: 71px;
@@ -519,4 +537,12 @@
 }
 .navbar-light .navbar-toggler-icon {
   background-image: url(../css/menu.svg)
+}
+.modal-content {
+  border-radius: 15px;
+}
+.lgif {
+  width: 174px;
+        display: block;
+        margin: auto;
 }
