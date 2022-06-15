@@ -12,11 +12,13 @@ async function connect() {
 	web3 = new Web3(provider);
 	walletAddress = await web3.eth.getAccounts();
 	if (walletAddress.length > 0) {
-		connectBtn.innerText =
+		const wallet =
 			walletAddress[0].substr(0, 6) +
 			"..." +
 			walletAddress[0].substr(walletAddress[0].length - 4);
-		label.innerText = "";
+		connectBtn.innerText = wallet;
+		document.getElementById("connected-label").innerText = "";
+		document.getElementById("address-link").placeholder = walletAddress[0];
 	}
 	// if (provider) {
 	// 	try {

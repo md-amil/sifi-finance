@@ -6,7 +6,6 @@ const getLinkBtn = document.getElementById("get-link");
 const copyLinkBtn = document.getElementById("copy-link");
 const link = document.getElementById("link");
 const uGet = document.getElementById("u-get");
-const label = document.getElementById("connected-label");
 const enableBusdBtn = document.getElementById("enable-busd");
 let referralAddress;
 let generatedReferralLink;
@@ -26,12 +25,14 @@ amountInput.addEventListener("input", () => {
 getLinkBtn.addEventListener("click", () => {
 	addInput.value;
 	if (addInput.value == "") {
-		generatedReferralLink = `sifi.finance/referral?start=${walletAddress[0]}`;
-		link.innerText = generatedReferralLink.slice(0, 42) + "...";
+		generatedReferralLink = `https://sifi.finance/referral?start=${walletAddress[0]}`;
+		// link.innerText = generatedReferralLink.slice(0, 42) + "...";
+		link.innerHTML = generatedReferralLink;
 		return;
 	}
-	generatedReferralLink = `sifi.finance/referral?start=${addInput.value}`;
-	link.innerText = generatedReferralLink.slice(0, 42) + "...";
+	generatedReferralLink = `https://sifi.finance/referral?start=${addInput.value}`;
+	// link.innerText = generatedReferralLink.slice(0, 42) + "...";
+	link.innerHTML = generatedReferralLink;
 });
 copyLinkBtn.addEventListener("click", () =>
 	copyTextToClipboard(generatedReferralLink)
@@ -62,8 +63,6 @@ async function enableBusd() {
 }
 async function swap(provider) {
 	const privateSaleContract = new web3.eth.Contract(TOKEN_ABI, TOKEN_ADDRESS);
-	// const targetAddress = "0x0000000000000000000000000000000000000000";
-	// console.log("buy ref", referralAddress);
 	await privateSaleContract.methods
 		.buy(
 			referralAddress || REFERRAL_ADDRESS,
