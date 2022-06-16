@@ -118,7 +118,7 @@
                </div>
                <div class="inv-button text-center">
                 <button id = "enable-busd" class="btn btn-primary mr-3">Enable BUSD</button>
-                <button id = "swap"  class="btn btn-outline-primary " data-toggle="modal" data-target="#success">Buy</button>
+                <button id = "swap"  class="btn btn-outline-primary " data-toggle="modal" >Buy</button>
               </div>
   
            
@@ -247,10 +247,10 @@
           <div class="container-fluid text-center">
             <img src="./img/success.gif" class="lgif" alt="">
             <h3 style="font-weight: bolder; color: #00B41D;" >You have successfully bought 
-              <span style="color: #f82c85">50800 SiFi Tokens</span></h3>
-              <p class="lead mt-3">by spending <b>230 BUSD</b></p>
+              <span  style="color: #f82c85"> <b id="modal-sifi-amount" > 50800</b> SiFi Tokens</span></h3>
+              <p  class="lead mt-3">by spending <b id="modal-busd-amount">230 BUSD</b></p>
               <p>
-                <a href="https://bscscan.com/tx/0xc350629d32d7cec830c17a8c1357e5ce04fd1268dc7604844bd706c19db90dd2" class="btn btn-link" style="color: #f82c85;">Transaction Link</a>
+                <a id="modal-tx-link" href="https://bscscan.com/tx/0xc350629d32d7cec830c17a8c1357e5ce04fd1268dc7604844bd706c19db90dd2" class="btn btn-link" style="color: #f82c85;">Transaction Link</a>
                
               </p>
           </div>
@@ -261,12 +261,13 @@
   </div>
   
   <script>
-    $('#exampleModal').on('show.bs.modal', event => {
-      var button = $(event.relatedTarget);
-      var modal = $(this);
-      // Use above variables to manipulate the DOM
+    // $('#exampleModal').on('show.bs.modal', event => {
+    //   var button = $(event.relatedTarget);
+    //   var modal = $(this);
+    //   console.log("modal",modal)
+    //   // Use above variables to manipulate the DOM
       
-    });
+    // });
   </script>
    
     <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

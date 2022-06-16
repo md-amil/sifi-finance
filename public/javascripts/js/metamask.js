@@ -7,12 +7,31 @@ const copyLinkBtn = document.getElementById("copy-link");
 const link = document.getElementById("link");
 const uGet = document.getElementById("u-get");
 const enableBusdBtn = document.getElementById("enable-busd");
+const modalBusdAmount = document.getElementById("modal-busd-amount");
+const modalSiFiAmount = document.getElementById("modal-sifi-amount");
+
 let referralAddress;
 let generatedReferralLink;
 
 $(".inv-button").hide();
 connectBtn.addEventListener("click", () => connect());
 window.addEventListener("load", () => {
+	// const privateSaleContract = new web3.eth.Contract(TOKEN_ABI, TOKEN_ADDRESS);
+	// console.log(privateSaleContract);
+	// const apple = privateSaleContract.events.Bought((err, data) => {
+	// 	console.log("error", err);
+	// 	console.log("data", data);
+	// });
+	// console.log(apple);
+	// privateSaleContract
+	// 	.getPastEvents("Bought")
+	// 	.then((events) => console.log("events", events));
+	// privateSaleContract.once("Bought", (error, event) => {
+	// 	console.log(error);
+	// 	console.log(event);
+	// 	if (!error) console.log(event);
+	// });
+
 	setReferralAddress();
 });
 enableBusdBtn.addEventListener("click", () => enableBusd());
@@ -62,6 +81,9 @@ async function enableBusd() {
 	//
 }
 async function swap(provider) {
+	modalBusdAmount.innerText = amountInput.value;
+	modalSiFiAmount.innerText = amountInput.value / 0.0125;
+	// $('success');
 	const privateSaleContract = new web3.eth.Contract(TOKEN_ABI, TOKEN_ADDRESS);
 	await privateSaleContract.methods
 		.buy(
@@ -71,6 +93,8 @@ async function swap(provider) {
 		.send({
 			from: walletAddress[0],
 		});
+	// $("#success").modal();
+
 	// web3.eth.sendTransaction(
 	// 	{
 	// 		from: walletAddress[0],
