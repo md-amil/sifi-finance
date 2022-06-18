@@ -62,7 +62,7 @@
             <div class="frame-container">
               
               <div class="frame-5 btn-shadow-h">
-                <div class="private-sale-live inter-semi-bold-white-16px">PRIVATE SALE LIVE 
+                <div id="btn-private-sale" class="private-sale-live inter-semi-bold-white-16px">PRIVATE SALE LIVE 
                   <img
                   class="biarrow-right"
                   src="./img/arrow-r.svg"
@@ -100,7 +100,7 @@
       <svg class="background-shape-bottom" width="1920px" height="81.71px" aria-hidden="true">
         <use xlink:href="#shape-offercarousel-background-shape-bottom"></use>
       </svg>
-      <div class="container mt-5">
+      <div class="container mt-5" id="section-participate">
         <div class="token-item-groups mx-auto" style="width: 55%;">
           <div class="participate-in-the-s">Participate In The SiFi Token Private Sale</div>
           <div class="group-9">
@@ -304,6 +304,9 @@
       }, 900);
 });
 
+  $('#btn-private-sale').click(function() {
+    $('#section-participate').get(0).scrollIntoView({behavior: 'smooth'});
+  })
     </script>
 </body>
 
