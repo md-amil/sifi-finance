@@ -9,6 +9,7 @@ const uGet = document.getElementById("u-get");
 const enableBusdBtn = document.getElementById("enable-busd");
 const modalBusdAmount = document.getElementById("modal-busd-amount");
 const modalSiFiAmount = document.getElementById("modal-sifi-amount");
+const modalTxLink = document.getElementById("modal-tx-link");
 
 let referralAddress;
 let generatedReferralLink;
@@ -16,16 +17,19 @@ let generatedReferralLink;
 $(".inv-button").hide();
 connectBtn.addEventListener("click", () => connect());
 window.addEventListener("load", () => {
-	// const privateSaleContract = new web3.eth.Contract(TOKEN_ABI, TOKEN_ADDRESS);
-	// console.log(privateSaleContract);
-	// const apple = privateSaleContract.events.Bought((err, data) => {
-	// 	console.log("error", err);
-	// 	console.log("data", data);
-	// });
-	// console.log(apple);
-	// privateSaleContract
-	// 	.getPastEvents("Bought")
-	// 	.then((events) => console.log("events", events));
+	const privateSaleContract = new web3.eth.Contract(
+		TOKEN_ABI,
+		PRIVATE_SALE_ADDRESS
+	);
+	console.log(privateSaleContract);
+	const apple = privateSaleContract.events.Bought((err, data) => {
+		console.log("error", err);
+		console.log("data", data);
+	});
+	console.log("soemthign", apple);
+	privateSaleContract
+		.getPastEvents("Bought")
+		.then((events) => console.log("events", events));
 	// privateSaleContract.once("Bought", (error, event) => {
 	// 	console.log(error);
 	// 	console.log(event);
@@ -67,7 +71,7 @@ async function enableBusd() {
 	console.log(busdContract);
 	try {
 		const res = await busdContract.methods
-			.approve(TOKEN_ADDRESS, web3.utils.toWei(amount, "ether"))
+			.approve(PRIVATE_SALE_ADDRESS, web3.utils.toWei(amount, "ether"))
 			.send({ from: walletAddress[0] });
 		// enableBusdBtn.disabled = true;
 		enableBusdBtn.classList.add("btn-outline-primary");
@@ -84,16 +88,22 @@ async function swap(provider) {
 	modalBusdAmount.innerText = amountInput.value;
 	modalSiFiAmount.innerText = amountInput.value / 0.0125;
 	// $('success');
-	const privateSaleContract = new web3.eth.Contract(TOKEN_ABI, TOKEN_ADDRESS);
-	await privateSaleContract.methods
+	const privateSaleContract = new web3.eth.Contract(
+		TOKEN_ABI,
+		PRIVATE_SALE_ADDRESS
+	);
+	const res = await privateSaleContract.methods
 		.buy(
 			referralAddress || REFERRAL_ADDRESS,
 			web3.utils.toWei(amountInput.value, "ether")
 		)
 		.send({
 			from: walletAddress[0],
+		})
+		.on("transactionHash", function (hash) {
+			modalTxLink.href = `https://testnet.bscscan.com/tx/${hash}`;
+			$("#success").modal();
 		});
-	// $("#success").modal();
 
 	// web3.eth.sendTransaction(
 	// 	{
