@@ -92,18 +92,22 @@ async function swap(provider) {
 		TOKEN_ABI,
 		PRIVATE_SALE_ADDRESS
 	);
-	const res = await privateSaleContract.methods
-		.buy(
-			referralAddress || REFERRAL_ADDRESS,
-			web3.utils.toWei(amountInput.value, "ether")
-		)
-		.send({
-			from: walletAddress[0],
-		})
-		.on("transactionHash", function (hash) {
-			modalTxLink.href = `https://testnet.bscscan.com/tx/${hash}`;
-			$("#success").modal();
-		});
+	try {
+		const res = await privateSaleContract.methods
+			.buy(
+				referralAddress || REFERRAL_ADDRESS,
+				web3.utils.toWei(amountInput.value, "ether")
+			)
+			.send({
+				from: walletAddress[0],
+			})
+			.on("transactionHash", function (hash) {
+				modalTxLink.href = `https://bscscan.com/tx/${hash}`;
+			});
+		$("#success").modal();
+	} catch (e) {
+		console.log(e);
+	}
 
 	// web3.eth.sendTransaction(
 	// 	{
