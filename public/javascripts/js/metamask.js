@@ -10,23 +10,23 @@ const enableBusdBtn = document.getElementById("enable-busd");
 const modalBusdAmount = document.getElementById("modal-busd-amount");
 const modalSiFiAmount = document.getElementById("modal-sifi-amount");
 const modalTxLink = document.getElementById("modal-tx-link");
-
+const referrer = document.getElementById("referrer");
 let referralAddress;
 let generatedReferralLink;
 
 $(".inv-button").hide();
 connectBtn.addEventListener("click", () => connect());
 window.addEventListener("load", () => {
+	setReferralAddress();
+
 	const privateSaleContract = new web3.eth.Contract(
 		TOKEN_ABI,
 		PRIVATE_SALE_ADDRESS
 	);
-	console.log(privateSaleContract);
 	const apple = privateSaleContract.events.Bought((err, data) => {
 		console.log("error", err);
 		console.log("data", data);
 	});
-	console.log("soemthign", apple);
 	privateSaleContract
 		.getPastEvents("Bought")
 		.then((events) => console.log("events", events));
@@ -35,8 +35,6 @@ window.addEventListener("load", () => {
 	// 	console.log(event);
 	// 	if (!error) console.log(event);
 	// });
-
-	setReferralAddress();
 });
 enableBusdBtn.addEventListener("click", () => enableBusd());
 swapBtn.addEventListener("click", () => swap());
@@ -130,8 +128,10 @@ function setReferralAddress() {
 	const parameters = new URLSearchParams(queryString);
 	if (parameters.get("start")) {
 		referralAddress = parameters.get("start");
-		console.log("reff", referralAddress);
+		referrer.innerText = "Your Referrer : " + referralAddress;
+		return;
 	}
+	referrer.innerText = "Your Referrer : None";
 	// $("#referrer-address").html(referralAddress);
 }
 
