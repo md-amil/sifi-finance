@@ -19,17 +19,17 @@ connectBtn.addEventListener("click", () => connect());
 window.addEventListener("load", () => {
 	setReferralAddress();
 
-	const privateSaleContract = new web3.eth.Contract(
-		TOKEN_ABI,
-		PRIVATE_SALE_ADDRESS
-	);
-	const apple = privateSaleContract.events.Bought((err, data) => {
-		console.log("error", err);
-		console.log("data", data);
-	});
-	privateSaleContract
-		.getPastEvents("Bought")
-		.then((events) => console.log("events", events));
+	// const privateSaleContract = new web3.eth.Contract(
+	// 	TOKEN_ABI,
+	// 	PRIVATE_SALE_ADDRESS
+	// );
+	// const apple = privateSaleContract.events.Bought((err, data) => {
+	// 	console.log("error", err);
+	// 	console.log("data", data);
+	// });
+	// privateSaleContract
+	// 	.getPastEvents("Bought")
+	// 	.then((events) => console.log("events", events));
 	// privateSaleContract.once("Bought", (error, event) => {
 	// 	console.log(error);
 	// 	console.log(event);
