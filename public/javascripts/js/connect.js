@@ -1,6 +1,7 @@
 let Web3Modal = window.Web3Modal.default;
 const connectBtn = document.getElementById("connect-btn");
-let walletAddress, web3, provider, web3Modal;
+let walletAddress = [];
+let web3, provider, web3Modal;
 
 async function connect() {
 	web3Modal = new Web3Modal({

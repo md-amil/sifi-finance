@@ -44,13 +44,18 @@ amountInput.addEventListener("input", () => {
 	$(".inv-button").show();
 });
 getLinkBtn.addEventListener("click", () => {
-	addInput.value;
+	if (walletAddress.length <= 0 && addInput.value == "") {
+		console.log("true");
+		return alert("Please Enter Wallet Address or Connect with metamask");
+	}
 	if (addInput.value == "") {
+		console.log("false");
 		generatedReferralLink = `https://sifi.finance/referral?start=${walletAddress[0]}`;
 		// link.innerText = generatedReferralLink.slice(0, 42) + "...";
 		link.innerHTML = generatedReferralLink;
 		return;
 	}
+	console.log("apple");
 	generatedReferralLink = `https://sifi.finance/referral?start=${addInput.value}`;
 	// link.innerText = generatedReferralLink.slice(0, 42) + "...";
 	link.innerHTML = generatedReferralLink;
@@ -85,6 +90,7 @@ async function enableBusd() {
 async function swap(provider) {
 	modalBusdAmount.innerText = amountInput.value;
 	modalSiFiAmount.innerText = amountInput.value / 0.0125;
+	if (walletAddress.length < 1) return alert("Please connect to your wallet");
 	// $('success');
 	const privateSaleContract = new web3.eth.Contract(
 		TOKEN_ABI,
