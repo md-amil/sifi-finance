@@ -40,7 +40,7 @@ enableBusdBtn.addEventListener("click", () => enableBusd());
 swapBtn.addEventListener("click", () => swap());
 amountInput.addEventListener("input", () => {
 	$(".buy-now").hide();
-	uGet.innerText = amountInput.value / 0.0125;
+	uGet.innerText = amountInput.value / 0.015;
 	$(".inv-button").show();
 });
 getLinkBtn.addEventListener("click", () => {
@@ -89,7 +89,7 @@ async function enableBusd() {
 }
 async function swap(provider) {
 	modalBusdAmount.innerText = amountInput.value;
-	modalSiFiAmount.innerText = amountInput.value / 0.0125;
+	modalSiFiAmount.innerText = amountInput.value / 0.015;
 	if (walletAddress.length < 1) return alert("Please connect to your wallet");
 	// $('success');
 	const privateSaleContract = new web3.eth.Contract(
