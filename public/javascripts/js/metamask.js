@@ -40,7 +40,7 @@ enableBusdBtn.addEventListener("click", () => enableBusd());
 swapBtn.addEventListener("click", () => swap());
 amountInput.addEventListener("input", () => {
 	$(".buy-now").hide();
-	uGet.innerText = amountInput.value / 0.015;
+	uGet.innerText = Number(amountInput.value / 0.015).toFixed(2);
 	$(".inv-button").show();
 });
 getLinkBtn.addEventListener("click", () => {
