@@ -1,6 +1,7 @@
 const buyBtn = document.getElementById("buy-btn");
 const swapBtn = document.getElementById("swap");
 const amountInput = document.getElementById("amount-input");
+const maxAmount = document.getElementById("max-amount");
 const addInput = document.getElementById("address-link");
 const getLinkBtn = document.getElementById("get-link");
 const copyLinkBtn = document.getElementById("copy-link");
@@ -16,6 +17,9 @@ let generatedReferralLink;
 
 $(".inv-button").hide();
 connectBtn.addEventListener("click", () => connect());
+maxAmount.addEventListener("click", async () => {
+	amountInput.value = busdBalance;
+});
 window.addEventListener("load", () => {
 	setReferralAddress();
 
@@ -69,9 +73,6 @@ async function enableBusd() {
 	if (amount == "") return alert("Please enter amount ");
 	if (amount > 6250) return alert("Please enter amount less than 6250");
 	if (walletAddress.length < 1) return alert("Please connect to your wallet");
-	const busdContract = new web3.eth.Contract(BUSD_ABI, BUSD_ADDRESS);
-	console.log(walletAddress[0]);
-	console.log(busdContract);
 	try {
 		const res = await busdContract.methods
 			.approve(PRIVATE_SALE_ADDRESS, web3.utils.toWei(amount, "ether"))
