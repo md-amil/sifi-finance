@@ -74,5 +74,8 @@
     background: #f82c85;
     border: none;
 }
+#link {
+   text-align: center;
+  }
 
 }

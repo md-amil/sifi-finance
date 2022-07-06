@@ -155,6 +155,10 @@
   font-size: 16px;
 margin: 0;  
 }
+tr.active {
+  background: #f82d85;
+        color: #fff;
+}
 .trans-history .btn-link{
   color: var(--violet-red);
 }
@@ -411,7 +415,10 @@ margin: 0;
   margin-top: 14px;
   min-height: 14px;
 }
-
+#link {
+  font-size: 14px;
+        color: #f82d85;
+}
 .main-sifi .group-10 {
   align-items: flex-start;
   display: flex;
@@ -420,9 +427,9 @@ margin: 0;
   width: 523px;
 }
 .table .thead-dark th {
-  color: #fff;
-  background-color: var(--primary-color);
-  border-color: var(--primary-color);
+  color: #333;
+  background-color: #ddd;
+  border-color: #ddd;
 }
 .main-sifi .overlap-group2 {
   height: 104px;
