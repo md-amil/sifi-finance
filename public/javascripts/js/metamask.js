@@ -7,6 +7,10 @@ const copyLinkBtn = document.getElementById("copy-link");
 const link = document.getElementById("link");
 const uGet = document.getElementById("u-get");
 const enableBusdBtn = document.getElementById("enable-busd");
+const modalBusdAmount = document.getElementById("modal-busd-amount");
+const modalSiFiAmount = document.getElementById("modal-sifi-amount");
+const modalTxLink = document.getElementById("modal-tx-link");
+const referrer = document.getElementById("referrer");
 let referralAddress;
 let generatedReferralLink;
 
@@ -14,22 +18,44 @@ $(".inv-button").hide();
 connectBtn.addEventListener("click", () => connect());
 window.addEventListener("load", () => {
 	setReferralAddress();
+
+	// const privateSaleContract = new web3.eth.Contract(
+	// 	TOKEN_ABI,
+	// 	PRIVATE_SALE_ADDRESS
+	// );
+	// const apple = privateSaleContract.events.Bought((err, data) => {
+	// 	console.log("error", err);
+	// 	console.log("data", data);
+	// });
+	// privateSaleContract
+	// 	.getPastEvents("Bought")
+	// 	.then((events) => console.log("events", events));
+	// privateSaleContract.once("Bought", (error, event) => {
+	// 	console.log(error);
+	// 	console.log(event);
+	// 	if (!error) console.log(event);
+	// });
 });
 enableBusdBtn.addEventListener("click", () => enableBusd());
 swapBtn.addEventListener("click", () => swap());
 amountInput.addEventListener("input", () => {
 	$(".buy-now").hide();
-	uGet.innerText = amountInput.value / 0.0125;
+	uGet.innerText = Number(amountInput.value / 0.015).toFixed(3);
 	$(".inv-button").show();
 });
 getLinkBtn.addEventListener("click", () => {
-	addInput.value;
+	if (walletAddress.length <= 0 && addInput.value == "") {
+		console.log("true");
+		return alert("Please Enter Wallet Address or Connect with metamask");
+	}
 	if (addInput.value == "") {
+		console.log("false");
 		generatedReferralLink = `https://sifi.finance/referral?start=${walletAddress[0]}`;
 		// link.innerText = generatedReferralLink.slice(0, 42) + "...";
 		link.innerHTML = generatedReferralLink;
 		return;
 	}
+	console.log("apple");
 	generatedReferralLink = `https://sifi.finance/referral?start=${addInput.value}`;
 	// link.innerText = generatedReferralLink.slice(0, 42) + "...";
 	link.innerHTML = generatedReferralLink;
@@ -48,7 +74,7 @@ async function enableBusd() {
 	console.log(busdContract);
 	try {
 		const res = await busdContract.methods
-			.approve(TOKEN_ADDRESS, web3.utils.toWei(amount, "ether"))
+			.approve(PRIVATE_SALE_ADDRESS, web3.utils.toWei(amount, "ether"))
 			.send({ from: walletAddress[0] });
 		// enableBusdBtn.disabled = true;
 		enableBusdBtn.classList.add("btn-outline-primary");
@@ -62,15 +88,31 @@ async function enableBusd() {
 	//
 }
 async function swap(provider) {
-	const privateSaleContract = new web3.eth.Contract(TOKEN_ABI, TOKEN_ADDRESS);
-	await privateSaleContract.methods
-		.buy(
-			referralAddress || REFERRAL_ADDRESS,
-			web3.utils.toWei(amountInput.value, "ether")
-		)
-		.send({
-			from: walletAddress[0],
-		});
+	modalBusdAmount.innerText = amountInput.value;
+	modalSiFiAmount.innerText = amountInput.value / 0.015;
+	if (walletAddress.length < 1) return alert("Please connect to your wallet");
+	// $('success');
+	const privateSaleContract = new web3.eth.Contract(
+		TOKEN_ABI,
+		PRIVATE_SALE_ADDRESS
+	);
+	try {
+		const res = await privateSaleContract.methods
+			.buy(
+				referralAddress || REFERRAL_ADDRESS,
+				web3.utils.toWei(amountInput.value, "ether")
+			)
+			.send({
+				from: walletAddress[0],
+			})
+			.on("transactionHash", function (hash) {
+				modalTxLink.href = `https://bscscan.com/tx/${hash}`;
+			});
+		$("#success").modal();
+	} catch (e) {
+		console.log(e);
+	}
+
 	// web3.eth.sendTransaction(
 	// 	{
 	// 		from: walletAddress[0],
@@ -92,23 +134,28 @@ function setReferralAddress() {
 	const parameters = new URLSearchParams(queryString);
 	if (parameters.get("start")) {
 		referralAddress = parameters.get("start");
-		console.log("reff", referralAddress);
+		referrer.innerText = "Your Referrer : " + referralAddress;
+		return;
 	}
+	referrer.innerText = "Your Referrer : None";
 	// $("#referrer-address").html(referralAddress);
 }
 
 function fallbackCopyTextToClipboard(text) {
-	var textArea = document.createElement("textarea");
-	textArea.value = text;
+	var input = document.createElement("input");
+	input.value = text;
 
 	// Avoid scrolling to bottom
-	textArea.style.top = "0";
-	textArea.style.left = "0";
-	textArea.style.position = "fixed";
+	// textArea.style.top = "0";
+	// textArea.style.left = "0";
+	// textArea.style.position = "fixed";
 
-	document.body.appendChild(textArea);
-	textArea.focus();
-	textArea.select();
+	document.body.appendChild(input);
+	input.select();
+	input.setSelectionRange(0, 99999);
+
+	input.focus();
+	input.select();
 
 	try {
 		var successful = document.execCommand("copy");
@@ -118,7 +165,7 @@ function fallbackCopyTextToClipboard(text) {
 		console.error("Fallback: Oops, unable to copy", err);
 	}
 
-	document.body.removeChild(textArea);
+	document.body.removeChild(input);
 }
 
 function copyTextToClipboard(text) {
