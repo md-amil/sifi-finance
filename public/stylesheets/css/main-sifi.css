@@ -553,3 +553,14 @@ tr.active {
         display: block;
         margin: auto;
 }
+
+.max-busd {
+  position: absolute;
+        top: 13px;
+        border-radius: 40px;
+        font-size: 12px;
+        right: 6px;
+        padding: 3px 11px;
+        background: #f72f84;
+        color: #fff;
+}
