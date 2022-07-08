@@ -1,6 +1,7 @@
 const buyBtn = document.getElementById("buy-btn");
 const swapBtn = document.getElementById("swap");
 const amountInput = document.getElementById("amount-input");
+const maxAmount = document.getElementById("max-amount");
 const addInput = document.getElementById("address-link");
 const getLinkBtn = document.getElementById("get-link");
 const copyLinkBtn = document.getElementById("copy-link");
@@ -16,6 +17,9 @@ let generatedReferralLink;
 
 $(".inv-button").hide();
 connectBtn.addEventListener("click", () => connect());
+maxAmount.addEventListener("click", async () => {
+	amountInput.value = busdBalance;
+});
 window.addEventListener("load", () => {
 	setReferralAddress();
 
@@ -69,29 +73,26 @@ async function enableBusd() {
 	if (amount == "") return alert("Please enter amount ");
 	if (amount > 6250) return alert("Please enter amount less than 6250");
 	if (walletAddress.length < 1) return alert("Please connect to your wallet");
-	const busdContract = new web3.eth.Contract(BUSD_ABI, BUSD_ADDRESS);
-	console.log(walletAddress[0]);
-	console.log(busdContract);
 	try {
+		$("#enable-busd").addClass("loader");
 		const res = await busdContract.methods
 			.approve(PRIVATE_SALE_ADDRESS, web3.utils.toWei(amount, "ether"))
 			.send({ from: walletAddress[0] });
-		// enableBusdBtn.disabled = true;
-		enableBusdBtn.classList.add("btn-outline-primary");
-		enableBusdBtn.classList.remove("btn-primary");
-		swapBtn.classList.remove("btn-outline-primary");
-		swapBtn.classList.add("btn-primary");
-		swapBtn.disabled = false;
 	} catch (e) {
 		console.log(e);
 	}
-	//
+
+	enableBusdBtn.classList.remove("loader");
+	enableBusdBtn.classList.add("btn-outline-primary");
+	enableBusdBtn.classList.remove("btn-primary");
+	swapBtn.classList.remove("btn-outline-primary");
+	swapBtn.classList.add("btn-primary");
+	swapBtn.disabled = false;
 }
 async function swap(provider) {
 	modalBusdAmount.innerText = amountInput.value;
 	modalSiFiAmount.innerText = amountInput.value / 0.015;
 	if (walletAddress.length < 1) return alert("Please connect to your wallet");
-	// $('success');
 	const privateSaleContract = new web3.eth.Contract(
 		TOKEN_ABI,
 		PRIVATE_SALE_ADDRESS

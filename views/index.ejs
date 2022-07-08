@@ -111,7 +111,7 @@
            
             <div class="form-group" style="position: relative;">
               <input id = 'amount-input' type="number"class="dropdown-selector form-control" placeholder="Enter BUSD Amount">
-              <button class="btn max-busd btn-xs">Max</button>
+              <button id = "max-amount" class="btn max-busd btn-xs">Max</button>
             </div>
           
             <div class="frame-container-1">
@@ -299,16 +299,7 @@
 
     <script>
 
-      $("#enable-busd").click(function(){
-        $(this).addClass('loader')
-        setTimeout(function(){
-          $("#enable-busd").removeClass("btn-primary");
-          $("#enable-busd").addClass("btn-outline-primary");
-          $("#enable-busd").removeClass("loader");
-          $("#enable-busd").prop('disabled', true); 
-          $("#swap").addClass("btn-primary");
-      }, 900);
-});
+     
   
 
   $('#btn-private-sale').click(function() {
