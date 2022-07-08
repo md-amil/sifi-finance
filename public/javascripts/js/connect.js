@@ -26,7 +26,8 @@ async function connect() {
 			.balanceOf(walletAddress[0])
 			.call();
 		console.log("balc", busdBalance);
-
+		document.getElementById("wallet-balance").innerText =
+			"Balance: " + busdBalance + " BUSD";
 		document.getElementById("connected-label").innerText = "";
 		// document.getElementById("address-link").placeholder = walletAddress[0];
 	}

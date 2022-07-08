@@ -145,7 +145,6 @@ function setReferralAddress() {
 function fallbackCopyTextToClipboard(text) {
 	var input = document.createElement("input");
 	input.value = text;
-
 	// Avoid scrolling to bottom
 	// textArea.style.top = "0";
 	// textArea.style.left = "0";
