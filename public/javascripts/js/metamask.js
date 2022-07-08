@@ -74,25 +74,25 @@ async function enableBusd() {
 	if (amount > 6250) return alert("Please enter amount less than 6250");
 	if (walletAddress.length < 1) return alert("Please connect to your wallet");
 	try {
+		$("#enable-busd").addClass("loader");
 		const res = await busdContract.methods
 			.approve(PRIVATE_SALE_ADDRESS, web3.utils.toWei(amount, "ether"))
 			.send({ from: walletAddress[0] });
-		// enableBusdBtn.disabled = true;
-		enableBusdBtn.classList.add("btn-outline-primary");
-		enableBusdBtn.classList.remove("btn-primary");
-		swapBtn.classList.remove("btn-outline-primary");
-		swapBtn.classList.add("btn-primary");
-		swapBtn.disabled = false;
 	} catch (e) {
 		console.log(e);
 	}
-	//
+
+	enableBusdBtn.classList.remove("loader");
+	enableBusdBtn.classList.add("btn-outline-primary");
+	enableBusdBtn.classList.remove("btn-primary");
+	swapBtn.classList.remove("btn-outline-primary");
+	swapBtn.classList.add("btn-primary");
+	swapBtn.disabled = false;
 }
 async function swap(provider) {
 	modalBusdAmount.innerText = amountInput.value;
 	modalSiFiAmount.innerText = amountInput.value / 0.015;
 	if (walletAddress.length < 1) return alert("Please connect to your wallet");
-	// $('success');
 	const privateSaleContract = new web3.eth.Contract(
 		TOKEN_ABI,
 		PRIVATE_SALE_ADDRESS

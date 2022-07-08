@@ -104,6 +104,8 @@
         <div class="token-item-groups mx-auto" style="width: 55%;">
           <div class="participate-in-the-s">Participate In The SiFi Token Private Sale</div>
             <div id = "referrer"></div>
+            <!-- <div>Balance 0</div> -->
+
           <div class="group-9">
             <div class="form-group" style="position: relative;">
               <input id = 'amount-input' type="number"class="dropdown-selector form-control" placeholder="Enter BUSD Amount">
@@ -295,16 +297,7 @@
 
     <script>
 
-      $("#enable-busd").click(function(){
-        $(this).addClass('loader')
-        setTimeout(function(){
-          $("#enable-busd").removeClass("btn-primary");
-          $("#enable-busd").addClass("btn-outline-primary");
-          $("#enable-busd").removeClass("loader");
-          $("#enable-busd").prop('disabled', true); 
-          $("#swap").addClass("btn-primary");
-      }, 900);
-});
+     
   
 
   $('#btn-private-sale').click(function() {
