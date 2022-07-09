@@ -18,7 +18,7 @@ let generatedReferralLink;
 $(".inv-button").hide();
 connectBtn.addEventListener("click", () => connect());
 maxAmount.addEventListener("click", async () => {
-	amountInput.value = busdBalance;
+	amountInput.value = busdBalance / 10 ** 18;
 });
 window.addEventListener("load", () => {
 	setReferralAddress();
