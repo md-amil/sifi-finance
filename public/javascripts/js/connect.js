@@ -27,7 +27,8 @@ async function connect() {
 			.call();
 		console.log("balc", busdBalance);
 		document.getElementById("wallet-balance").innerText =
-			"Balance: " + busdBalance / 10 ** 18 + " BUSD";
+			"Balance: " + Number(busdBalance / 10 ** 18).toFixed(3);
+		+" BUSD";
 		document.getElementById("connected-label").innerText = "";
 		// document.getElementById("address-link").placeholder = walletAddress[0];
 	}
