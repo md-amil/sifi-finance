@@ -18,7 +18,7 @@ let generatedReferralLink;
 $(".inv-button").hide();
 connectBtn.addEventListener("click", () => connect());
 maxAmount.addEventListener("click", async () => {
-	amountInput.value = busdBalance;
+	amountInput.value = Number(busdBalance / 10 ** 18).toFixed(3);
 });
 window.addEventListener("load", () => {
 	setReferralAddress();
@@ -145,7 +145,6 @@ function setReferralAddress() {
 function fallbackCopyTextToClipboard(text) {
 	var input = document.createElement("input");
 	input.value = text;
-
 	// Avoid scrolling to bottom
 	// textArea.style.top = "0";
 	// textArea.style.left = "0";
