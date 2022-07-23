@@ -1,8 +1,10 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,500,600");
+/* The following line is used to measure usage of this code in production. For more info see our usage billing page */
+@import url("https://px.animaapp.com/594caf1565e267000bae381a.5ea5b4a2a7faa7c6d14406e0.ln9MvPb.hcp.png");
 
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800,900|Noto+Sans:400,700");
-body {
-  font-family: var(--font-family-raleway);
-}
+
+
 .screen a {
   display: contents;
   text-decoration: none;
@@ -30,56 +32,16 @@ body {
 * {
   box-sizing: border-box;
 }
-.por {
-  position: relative !important;
-}
-.spacer {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  width: 100%;
 
+.spacer {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
-.spacer-top {
-  padding-top: 80px;
-  width: 100%;
- 
+.spacer-half {
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-.spacer-bottom {
-  padding-bottom: 80px;
-  width: 100%;
-}
-.btn-primary {
-  background-color: var(--violet-red);
-  border-radius: 8px 8px 8px 20px;
-  padding: 13px 30px;
-  border: none;
-}
-.btn-primary ,.btn-primary:hover{
-  color: #fff;
-  background-color:  var(--violet-red);
-  border-color:  var(--violet-red);
-}
-.btn-primary:hover {
-  background-color: #cd1163;
-}
-.btn-shadow-h {
-  position: relative;
-  cursor: pointer;
-}
-.btn-shadow-h:before {
-  content: '';
-  align-items: flex-start;
-  background-color: var(--violet-red-2);
-  border-radius: 20px;
-  display: flex;
-  height: 100%;
-  left: 21px;
-  min-width: 100%;
-  /* padding: 21px 69px; */
-  position: absolute;
-  top: 22px;
-  filter: blur(18px);
-}
+
 
 .loader {
   position: relative;
