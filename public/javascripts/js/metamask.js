@@ -43,6 +43,7 @@ window.addEventListener("load", () => {
 enableBusdBtn.addEventListener("click", () => enableBusd());
 swapBtn.addEventListener("click", () => swap());
 amountInput.addEventListener("input", () => {
+	console.log("amount");
 	$(".buy-now").hide();
 	uGet.innerText = Number(amountInput.value / 0.015).toFixed(3);
 	$(".inv-button").show();
@@ -69,6 +70,7 @@ copyLinkBtn.addEventListener("click", () =>
 );
 
 async function enableBusd() {
+	console.log("called");
 	const amount = amountInput.value;
 	if (amount == "") return alert("Please enter amount ");
 	if (amount > 6250) return alert("Please enter amount less than 6250");

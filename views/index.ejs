@@ -71,7 +71,7 @@
                   <div class="a-simple-finance-por">
                     A simple Finance portfolio management platform<br>to invest in Web3 and Metaverse tokens.
                   </div>
-                  <button class="sifi-btn mt-3">Join Private Sale </button>
+                  <button href="#private-sale" class="sifi-btn mt-3">Join Private Sale </button>
                    
                 </div>
                </div>
@@ -85,7 +85,7 @@
        
       </section>
   
-      <section class="container-fluid por dual-color">
+      <section id="private-sale" class="container-fluid por dual-color">
         <div class="row">
           <div class="container spacer">
             <div class="row align-items-center index-1 db-rc">
@@ -102,10 +102,10 @@
                   <div class="group-3">
                     <div class="group-6">
                       <div class="form-group por">
-                        <label for="" class="d-flex justify-content-between"  id = 'amount-input'>Enter BUSD Amount
-                          <div class="amount-100" >Amount: 100</div>
+                        <label for="" class="d-flex justify-content-between"  >Enter BUSD Amount
+                          <div id="wallet-balance" class="amount-100" >Amount: 100</div>
                         </label>
-                        <input type="text" class="sifi-input" placeholder="Enter BUSD Amount">
+                        <input type="text" id="amount-input" class="sifi-input" placeholder="Enter BUSD Amount">
                         <div class="rectangle-2"  id = "max-amount">
                           Max
                         </div>
@@ -114,7 +114,7 @@
         
                     <div class="group-4">
                   
-                      <button class="sifi-btn"  id = "enable-busd">Enable BUSD</button>
+                      <button class="sifi-btn"  id ="enable-busd">Enable BUSD</button>
                       <button class="sifi-btn bg-white ml-4" id = "swap" data-toggle="modal">Buy</button>
                     </div>
       
@@ -124,7 +124,7 @@
                         <div class="you-get-15533333-si-fi valign-text-middle titlesmallreg">
                           <span
                             ><span class="span titlesmallreg">You get: </span
-                            ><span class="span1 titlesmallreg"  id="u-get" >15533.333</span><span class="span titlesmallreg"> SiFi</span>
+                            ><span class="span1 titlesmallreg"  id="u-get" >0.000</span><span class="span titlesmallreg"> SiFi</span>
                           </span>
                         </div>
                       </div>
@@ -166,13 +166,14 @@
       <div class="form-group por">
         <label for="">Referral Link</label>
         <div class="d-flex align-items-center ref-col">
-        <input type="text" class="sifi-input mt-0" placeholder="Enter Your BSC Address (BEP-20 type)">
+        <input type="text" id="address-link" class="sifi-input mt-0" placeholder="Enter Your BSC Address (BEP-20 type)">
         <div class="btns-ref">
-          <button class="sifi-btn mx-3">Get Link</button>
-          <button class="sifi-btn bg-white">Copy</button>
+          <button id="get-link" class="sifi-btn mx-3">Get Link</button>
+          <button id="copy-link" class="sifi-btn bg-white">Copy</button>
         </div>
       
         </div>
+        <p style="margin-top: 20px;" id="link"></p>
         <p class="earn-referral-reward inter-normal-shark-16px mt-3">
           Earn referral rewards in BUSD by inviting your friends to buy SiFi tokens.
         </p>
