@@ -71,12 +71,21 @@
                   <div class="a-simple-finance-por">
                     A simple Finance portfolio management platform<br>to invest in Web3 and Metaverse tokens.
                   </div>
-                  <button href="#private-sale" class="sifi-btn mt-3">Join Private Sale </button>
+                  <button href="#private-sale" id="btn-private-sale" class="sifi-btn private-sale-live page mt-3">Join Private Sale </button>
                    
                 </div>
                </div>
                <div class="col-md-6">
-                <img class="hero-img" src="img/group@1x.svg">
+                <div class="hero-img">
+                
+                  <video autoplay muted controls loop>
+
+                    <source src="./img/video.mp4"
+                            type="video/mp4">
+                    Sorry, your browser doesn't support embedded videos.
+                </video>
+                
+                </div>
                </div>
              </div>
            </div>
@@ -85,7 +94,7 @@
        
       </section>
   
-      <section id="private-sale" class="container-fluid por dual-color">
+      <section id="private-sale"  class="container-fluid por dual-color">
         <div class="row">
           <div class="container spacer">
             <div class="row align-items-center index-1 db-rc">
@@ -95,7 +104,7 @@
                   The SiFi Token
                   Private Sale
                 </div>
-                <div id = "referrer" style="text-align: center; margin: 10px;"></div>
+                <div id = "referrer" style="margin: 10px;"></div>
               </div>
               <div class="col">
                 <div class="group-container ml-5">
@@ -164,7 +173,7 @@
       </div>
     
       <div class="form-group por">
-        <label for="">Referral Link</label>
+      
         <div class="d-flex align-items-center ref-col">
         <input type="text" id="address-link" class="sifi-input mt-0" placeholder="Enter Your BSC Address (BEP-20 type)">
         <div class="btns-ref">
@@ -192,7 +201,7 @@
               Hey, <br>
               I am SIFI
             </div>
-            <div id = "referrer" style="text-align: center; margin: 10px;"></div>
+            <div id = "referrer" style="margin: 10px;"></div>
           </div>
           <div class="col">
             <ul class="bullet-list hey-list">
@@ -317,8 +326,20 @@
   
 
   $('#btn-private-sale').click(function() {
-    $('#section-participate').get(0).scrollIntoView({behavior: 'smooth'});
+    $('#private-sale').get(0).scrollIntoView({behavior: 'smooth'});
   })
+
+  
+// $(function() {
+//     $('a.page').bind('click', function(event) {
+//         var $anchor = $(this);
+//         $('html, body').stop().animate({
+//             scrollTop: $($anchor.attr('href')).offset().top
+//         }, 1500);
+//         event.preventDefault();
+//     });
+// });
+
     </script>
 </body>
 
