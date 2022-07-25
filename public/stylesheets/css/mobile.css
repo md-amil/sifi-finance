@@ -10,6 +10,13 @@
          align-items: center;
        }
 
+       .hey-title {
+        margin-right: 0;
+        text-align: right;
+        font-size: 52px !important;
+        text-align: center;
+}
+
        .ref-col {
         flex-direction: column;
       }

@@ -757,6 +757,7 @@ margin-right: 50px;
   transform: translate(1px, 1px);
   cursor: pointer;
   outline: 0;
+  color: #000 !important;
 }
 .sifi-btn-outline:hover {
   /* box-shadow: none; */
@@ -898,8 +899,8 @@ white-space: nowrap;
 }
 .bullet-list li {
   font-size: 16px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 .h100 {
   height: 100%;
@@ -973,13 +974,7 @@ white-space: nowrap;
   right: -12px;
 
 }
-.hey-list li {
-  font-size: 24px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        line-height: 1.5;
 
-}
 .hey-title {
   margin-right: 90px;
   text-align: right;
@@ -990,4 +985,6 @@ white-space: nowrap;
         height: 400px;
         object-fit: cover;
         border-radius: 0 20px;
+        box-shadow: -4px 4px 0px #000000;
+        border: 1px solid;
 }
