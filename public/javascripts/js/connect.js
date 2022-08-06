@@ -20,7 +20,9 @@ async function connect() {
 			"..." +
 			walletAddress[0].substr(walletAddress[0].length - 4);
 		connectBtn.innerText = wallet;
-		busdContract = new web3.eth.Contract(BUSD_ABI, BUSD_ADDRESS);
+		const busdABI = await getBusdABI();
+		const busdAddress = await getBusdAddress();
+		busdContract = new web3.eth.Contract(busdABI, busdAddress);
 
 		busdBalance = await busdContract.methods
 			.balanceOf(walletAddress[0])

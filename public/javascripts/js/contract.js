@@ -385,7 +385,7 @@ const BUSD_ABI = [
 	{
 		constant: true,
 		inputs: [],
-		name: "getOwner",
+		name: "const getOwner",
 		outputs: [{ name: "", type: "address" }],
 		payable: false,
 		stateMutability: "view",
@@ -731,120 +731,152 @@ const PRIVATE_SALE_ADDRESS = "0x877a209C9541C244a2c27A3dBdA774114260c938";
 const REFERRAL_ADDRESS = "0x0000000000000000000000000000000000000000";
 
 // test
-// const PRIVATE_SALE_ADDRESS = "0x157657c8a45b1d2b4319e81d9053536691a7e2a0";
-// const BUSD_ADDRESS = "0x04757CA5A04940b7005eb4be08bD9E3a1DcE52F8";
+const TEST_PRIVATE_SALE_ADDRESS = "0x157657c8a45b1d2b4319e81d9053536691a7e2a0";
+const TEST_BUSD_ADDRESS = "0x04757CA5A04940b7005eb4be08bD9E3a1DcE52F8";
 
-// const BUSD_ABI = [
-// 	{
-// 		inputs: [
-// 			{ internalType: "address", name: "_logic", type: "address" },
-// 			{ internalType: "address", name: "admin_", type: "address" },
-// 			{ internalType: "bytes", name: "_data", type: "bytes" },
-// 		],
-// 		stateMutability: "payable",
-// 		type: "constructor",
-// 	},
-// 	{
-// 		anonymous: false,
-// 		inputs: [
-// 			{
-// 				indexed: false,
-// 				internalType: "address",
-// 				name: "previousAdmin",
-// 				type: "address",
-// 			},
-// 			{
-// 				indexed: false,
-// 				internalType: "address",
-// 				name: "newAdmin",
-// 				type: "address",
-// 			},
-// 		],
-// 		name: "AdminChanged",
-// 		type: "event",
-// 	},
-// 	{
-// 		anonymous: false,
-// 		inputs: [
-// 			{
-// 				indexed: true,
-// 				internalType: "address",
-// 				name: "beacon",
-// 				type: "address",
-// 			},
-// 		],
-// 		name: "BeaconUpgraded",
-// 		type: "event",
-// 	},
-// 	{
-// 		anonymous: false,
-// 		inputs: [
-// 			{
-// 				indexed: true,
-// 				internalType: "address",
-// 				name: "implementation",
-// 				type: "address",
-// 			},
-// 		],
-// 		name: "Upgraded",
-// 		type: "event",
-// 	},
-// 	{ stateMutability: "payable", type: "fallback" },
-// 	{
-// 		inputs: [],
-// 		name: "admin",
-// 		outputs: [{ internalType: "address", name: "admin_", type: "address" }],
-// 		stateMutability: "nonpayable",
-// 		type: "function",
-// 	},
-// 	{
-// 		inputs: [
-// 			{ internalType: "address", name: "newAdmin", type: "address" },
-// 		],
-// 		name: "changeAdmin",
-// 		outputs: [],
-// 		stateMutability: "nonpayable",
-// 		type: "function",
-// 	},
-// 	{
-// 		inputs: [],
-// 		name: "implementation",
-// 		outputs: [
-// 			{
-// 				internalType: "address",
-// 				name: "implementation_",
-// 				type: "address",
-// 			},
-// 		],
-// 		stateMutability: "nonpayable",
-// 		type: "function",
-// 	},
-// 	{
-// 		inputs: [
-// 			{
-// 				internalType: "address",
-// 				name: "newImplementation",
-// 				type: "address",
-// 			},
-// 		],
-// 		name: "upgradeTo",
-// 		outputs: [],
-// 		stateMutability: "nonpayable",
-// 		type: "function",
-// 	},
-// 	{
-// 		inputs: [
-// 			{
-// 				internalType: "address",
-// 				name: "newImplementation",
-// 				type: "address",
-// 			},
-// 			{ internalType: "bytes", name: "data", type: "bytes" },
-// 		],
-// 		name: "upgradeToAndCall",
-// 		outputs: [],
-// 		stateMutability: "payable",
-// 		type: "function",
-// 	},
-// 	{ stateMutability: "payable", type: "receive" },
-// ];
+const TEST_BUSD_ABI = [
+	{
+		inputs: [
+			{ internalType: "address", name: "_logic", type: "address" },
+			{ internalType: "address", name: "admin_", type: "address" },
+			{ internalType: "bytes", name: "_data", type: "bytes" },
+		],
+		stateMutability: "payable",
+		type: "constructor",
+	},
+	{
+		anonymous: false,
+		inputs: [
+			{
+				indexed: false,
+				internalType: "address",
+				name: "previousAdmin",
+				type: "address",
+			},
+			{
+				indexed: false,
+				internalType: "address",
+				name: "newAdmin",
+				type: "address",
+			},
+		],
+		name: "AdminChanged",
+		type: "event",
+	},
+	{
+		anonymous: false,
+		inputs: [
+			{
+				indexed: true,
+				internalType: "address",
+				name: "beacon",
+				type: "address",
+			},
+		],
+		name: "BeaconUpgraded",
+		type: "event",
+	},
+	{
+		anonymous: false,
+		inputs: [
+			{
+				indexed: true,
+				internalType: "address",
+				name: "implementation",
+				type: "address",
+			},
+		],
+		name: "Upgraded",
+		type: "event",
+	},
+	{ stateMutability: "payable", type: "fallback" },
+	{
+		inputs: [],
+		name: "admin",
+		outputs: [{ internalType: "address", name: "admin_", type: "address" }],
+		stateMutability: "nonpayable",
+		type: "function",
+	},
+	{
+		inputs: [
+			{ internalType: "address", name: "newAdmin", type: "address" },
+		],
+		name: "changeAdmin",
+		outputs: [],
+		stateMutability: "nonpayable",
+		type: "function",
+	},
+	{
+		inputs: [],
+		name: "implementation",
+		outputs: [
+			{
+				internalType: "address",
+				name: "implementation_",
+				type: "address",
+			},
+		],
+		stateMutability: "nonpayable",
+		type: "function",
+	},
+	{
+		inputs: [
+			{
+				internalType: "address",
+				name: "newImplementation",
+				type: "address",
+			},
+		],
+		name: "upgradeTo",
+		outputs: [],
+		stateMutability: "nonpayable",
+		type: "function",
+	},
+	{
+		inputs: [
+			{
+				internalType: "address",
+				name: "newImplementation",
+				type: "address",
+			},
+			{ internalType: "bytes", name: "data", type: "bytes" },
+		],
+		name: "upgradeToAndCall",
+		outputs: [],
+		stateMutability: "payable",
+		type: "function",
+	},
+	{ stateMutability: "payable", type: "receive" },
+];
+
+const isMainnet = async () => {
+	const chainId = await provider.request({ method: "eth_chainId" });
+	const binanceTestChainId = "0x61";
+	const smartChain = "0x38";
+	return chainId === smartChain;
+};
+
+const getBusdAddress = async () => {
+	const mainnet = await isMainnet();
+	if (mainnet) {
+		return BUSD_ADDRESS;
+	}
+	return TEST_BUSD_ADDRESS;
+};
+const getPrivateSaleAddress = async () => {
+	const mainnet = await isMainnet();
+	if (mainnet) {
+		return PRIVATE_SALE_ADDRESS;
+	}
+	return TEST_PRIVATE_SALE_ADDRESS;
+};
+const getBusdABI = async () => {
+	const mainnet = await isMainnet();
+	if (mainnet) {
+		return BUSD_ABI;
+	}
+	return TEST_BUSD_ABI;
+};
+const getPrivateSaleABI = async () => {
+	return TOKEN_ABI;
+};

@@ -77,8 +77,9 @@ async function enableBusd() {
 	if (walletAddress.length < 1) return alert("Please connect to your wallet");
 	try {
 		$("#enable-busd").addClass("loader");
+		const privateSaleAddress = await getPrivateSaleAddress();
 		const res = await busdContract.methods
-			.approve(PRIVATE_SALE_ADDRESS, web3.utils.toWei(amount, "ether"))
+			.approve(privateSaleAddress, web3.utils.toWei(amount, "ether"))
 			.send({ from: walletAddress[0] });
 	} catch (e) {
 		console.log(e);
@@ -94,12 +95,12 @@ async function enableBusd() {
 async function swap(provider) {
 	modalBusdAmount.innerText = amountInput.value;
 	modalSiFiAmount.innerText = amountInput.value / 0.015;
-	return $("#success").modal();
 
 	if (walletAddress.length < 1) return alert("Please connect to your wallet");
+	const privateSaleAddress = await getPrivateSaleAddress();
 	const privateSaleContract = new web3.eth.Contract(
-		TOKEN_ABI,
-		PRIVATE_SALE_ADDRESS
+		getPrivateSaleABI(),
+		privateSaleAddress
 	);
 	try {
 		const res = await privateSaleContract.methods
@@ -112,6 +113,7 @@ async function swap(provider) {
 			})
 			.on("transactionHash", function (hash) {
 				modalTxLink.href = `https://bscscan.com/tx/${hash}`;
+				$("#success").modal();
 			});
 	} catch (e) {
 		console.log(e);
