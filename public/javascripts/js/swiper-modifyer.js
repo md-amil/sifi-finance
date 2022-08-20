@@ -13,7 +13,8 @@ $('a.page').click(function(){
     var galleryTop = new Swiper('.gallery-top', {
       spaceBetween: 10,
       slidesPerView: 1,
-      centeredSlides:true,
+      // centeredSlides:true,
+      // width: "full",
       hashNav:true,
        autoplay: {
           delay: 3000,
@@ -22,18 +23,23 @@ $('a.page').click(function(){
        breakpoints: {
        
             640: {
-             width: 170,
+            //  width: 170,
               spaceBetween: 0,
+              slidesPerView: 1,
+            
             },
 
             360: {
-              width: 170,
+              // width: 170,
               spaceBetween: 0,
+              slidesPerView: 1,
+             
             },
 
              320: {
-              width: 150,
+              // width: 150,
               spaceBetween: 0,
+              slidesPerView: 1,
               
              
             }
@@ -109,15 +115,14 @@ $('a.page').click(function(){
         onlyInViewport: true,
       },
        breakpoints: {
-            
             640: {
               freemode:true,
-              slidesPerView: 3,
+              slidesPerView: 1,
               spaceBetween: 20,
             },
             320: {
               freemode:true,
-              slidesPerView: 3,
+              slidesPerView: 1,
               spaceBetween: 20,
             }
       }

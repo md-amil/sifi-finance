@@ -1045,6 +1045,9 @@ white-space: nowrap;
   position: absolute;
   right: 50px;
 }
+.shadow-box img {
+  width: 100%;
+}
 .gallery-top, .gallery-top .swiper-wrapper, .gallery-top .shadow-box{
   height: 98%;
 }

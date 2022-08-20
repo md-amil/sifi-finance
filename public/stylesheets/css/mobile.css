@@ -120,9 +120,15 @@
    
 }
 .group-4 {
-   
     min-width: 100%;
+    flex-wrap: wrap;
+        justify-content: center;
 }
+.group-4  a.sifi-btn-outline.ml-3{
+    margin-top: 20px;
+    margin-left: 0 !important;
+}
+
 .overlap-group-1 {
     border-radius: 4px;
     height: 47px;
@@ -171,5 +177,12 @@ h4.bold.m-0 {
 }
 .hey {
     height: 276px;
+}
+.gallery-top .swiper-slide {
+    padding-right: 10px;
+    /* width: 100% !important; */
+}
+.sf-box {
+    margin-right: 10px;
 }
 }
