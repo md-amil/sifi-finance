@@ -388,12 +388,12 @@
    
   </section>
 
-  <section class="container-fluid por dual-color rdmp" >
+  <section class="container-fluid por dual-color rdmp sticky-col" >
     <div class="row">
       <div class="container spacer">
         <div class="row">
-          <div class="col-md-6  right-arrow">
-            <div class="montserrat-bold-cod-gray-55px text-center mb-5">
+          <div class="col-md-6  right-arrow ">
+            <div class="montserrat-bold-cod-gray-55px mb-5 fixed-title">
               ROADMAP
             </div>
             </div>
@@ -463,7 +463,7 @@ Audit
    
   </section>
 
-  <section class="container-fluid por" style="background-color: #C3EAD8;">
+  <section class="container-fluid por" style="background-color: #C3EAD8; z-index: 100;">
     <div class="row">
       <div class="container spacer">
         <div class="montserrat-bold-cod-gray-55px text-center mb-5">
@@ -709,6 +709,16 @@ Audit
 
      
   
+$(window).scroll(function(){
+	var sticky = $('.sticky-col'),
+		scroll = $(window).scrollTop();
+    console.log( scroll )
+  
+	if (scroll >= 3025) sticky.addClass('fixed');
+	else sticky.removeClass('fixed');
+  });
+
+
 
   $('#btn-private-sale').click(function() {
     $('#private-sale').get(0).scrollIntoView({behavior: 'smooth'});

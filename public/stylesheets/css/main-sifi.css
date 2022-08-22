@@ -1212,3 +1212,19 @@ margin-top: 10px;
   top: 0;
   z-index: 1;
 }
+.sticky-col.fixed .fixed-title {
+  position: fixed;
+        top: 150px;
+}
+.sticky-col.fixed .right-arrow:before {
+  bottom: inherit;
+  right: -2px;
+  top: 0;
+  z-index: 1;
+  position: fixed;
+  left: 662px;
+  top: 134px;
+}
+.rdmp .right-arrow {
+  top: 70px;
+}
