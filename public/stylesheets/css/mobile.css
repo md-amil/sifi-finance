@@ -185,4 +185,53 @@ h4.bold.m-0 {
 .sf-box {
     margin-right: 10px;
 }
+
+.sticky-col.fixed .fixed-title {
+    position: initial;
+          top: 150px;
+  }
+  .sticky-col.fixed .right-arrow:before {
+    bottom: inherit;
+    right: -2px;
+    top: 0;
+    z-index: 1;
+    position: initial;
+    left: 662px;
+    top: 134px;
+  }
+
+ .rdmp.dual-color::before {
+    height: 177px !important;
+  }
+  .rdmp .right-arrow {
+    top: -50px;
+    z-index: 2;
+    text-align: center;
+}
+.timeline-vr li h4 {
+ 
+    right: 15%;
+}
+.timeline-vr li:nth-child(even) h4 {
+    right: inherit;
+    left: 15%;
+}
+.attach-token li {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 50px;
+}
+.l-text {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.thr-col .col {
+    height: 200px;
+}
+.qr {
+    margin-top: 15px;
+}
+.group-4 .mx-4{
+    margin-right: 0 !important;
+}
 }
