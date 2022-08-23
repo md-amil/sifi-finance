@@ -1,3 +1,29 @@
+@font-face {
+  font-family: 'sofia-pro';
+  src: url('../../Fonts/sofia-pro/Sofia\ Pro\ Light\ Az.otf'); /* IE9 Compat Modes */
+  src: url('../../Fonts/sofia-pro/Sofia\ Pro\ Light\ Az.otf') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../Fonts/sofia-pro/Sofia\ Pro\ Light\ Az.otf') format('otf'), /* Super Modern Browsers */
+}
+
+@font-face {
+  font-family: 'darker-grotesque';
+  src: url('../../Fonts/darker-grotesque/DarkerGrotesque-Bold.woff'); /* IE9 Compat Modes */
+  src: url('../../Fonts/darker-grotesque/DarkerGrotesque-Bold.woff') format('woff'), /* IE6-IE8 */
+       url('../../Fonts/darker-grotesque/DarkerGrotesque-Bold.woff') format('woff');
+    font-weight: 700;
+   font-style: normal;
+}
+
+@font-face {
+  font-family: 'darker-grotesque';
+  src: url('../../Fonts/darker-grotesque/DarkerGrotesque-ExtraBold.woff'); /* IE9 Compat Modes */
+  src: url('../../Fonts/darker-grotesque/DarkerGrotesque-ExtraBold.woff') format('woff'), /* IE6-IE8 */
+       url('../../Fonts/darker-grotesque/DarkerGrotesque-ExtraBold.woff') format('woff');
+    font-weight: 900;
+   font-style: normal;
+}
+
+
 :root { 
   --black: #000000;
   --brandprimary: #fef86b;
@@ -8,14 +34,14 @@
   --greysclae600: #23252a;
   --greysclae800: #040509;
   --ui-colorsyellow: #fef86b;
- 
   --font-size-l: 20px;
   --font-size-m: 16px;
   --font-size-s: 14px;
   --font-size-xl: 22px;
   --font-size-xs: 12px;
   --font-size-xxl: 55px;
-  --font-family-montserrat: "Montserrat", Helvetica;
+  --font-family-montserrat: "sofia-pro";
+  --font-family-darker: "darker-grotesque";
 }
 * {
   font-family: var(--font-family-montserrat) !important;
@@ -23,6 +49,9 @@
 }
 body {
   font-family: var(--font-family-montserrat);
+}
+h1,h2,h3,h4,h5 {
+  font-family: var(--font-family-darker);
 }
 .titlesmallreg {
   font-family: var(--font-family-montserrat);
@@ -56,11 +85,11 @@ body {
 
 .montserrat-bold-cod-gray-55px {
   color: var(--greysclae800);
-  font-family: var(--font-family-montserrat);
+  font-family: var(--font-family-darker) !important;
   font-size: var(--font-size-xxl);
   font-style: normal;
-  font-weight: 700;
-line-height: 1.4;
+  font-weight: 900;
+line-height: 1.1;
 }
 
 .border-1px-black {

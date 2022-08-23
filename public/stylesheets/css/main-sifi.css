@@ -8,6 +8,9 @@
   width: 1440px;
   z-index: -1;
 }
+li.show-s:hover {
+  cursor: pointer;
+}
 
 .vector {
   height: 100%;
@@ -1214,7 +1217,7 @@ margin-top: 10px;
 }
 .sticky-col.fixed .fixed-title {
   position: fixed;
-        top: 150px;
+        top: 375px;
 }
 .sticky-col.fixed .right-arrow:before {
   bottom: inherit;
@@ -1223,8 +1226,8 @@ margin-top: 10px;
   z-index: 1;
   position: fixed;
   left: 662px;
-  top: 134px;
+  top: 375px;
 }
 .rdmp .right-arrow {
-  top: 70px;
+  top: 240px;
 }
