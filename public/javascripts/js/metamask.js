@@ -70,7 +70,6 @@ copyLinkBtn.addEventListener("click", () =>
 );
 
 async function enableBusd() {
-	console.log("called");
 	const amount = amountInput.value;
 	if (amount == "") return alert("Please enter amount ");
 	if (amount > 6250) return alert("Please enter amount less than 6250");
@@ -111,7 +110,7 @@ async function swap(provider) {
 			.on("transactionHash", function (hash) {
 				modalTxLink.href = `https://bscscan.com/tx/${hash}`;
 			});
-		$("#success").modal();
+		$("#success").modal("show");
 	} catch (e) {
 		console.log(e);
 	}
