@@ -1,4 +1,5 @@
 import { connect } from "./connect";
+import "./metamask";
 
 $(window).on("load", function () {
     connect(document.getElementById("connect-btn"));
