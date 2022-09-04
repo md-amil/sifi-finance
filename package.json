@@ -1,5 +1,5 @@
 {
-  "name": "cifi-finance",
+  "name": "sifi-finance",
   "version": "1.0.0",
   "description": "",
   "main": "public/js/index.js",
@@ -23,5 +23,6 @@
   },
   "devDependencies": {
     "parcel": "^2.7.0"
-  }
+  },
+  "browserslist": "> 0.5%, last 5 versions, not dead"
 }
