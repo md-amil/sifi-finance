@@ -10,6 +10,7 @@ const uGet = document.getElementById("u-get");
 const enableBusdBtn = document.getElementById("enable-busd");
 const modalBusdAmount = document.getElementById("modal-busd-amount");
 const modalSiFiAmount = document.getElementById("modal-sifi-amount");
+const connectBtn = document.getElementById("connect-btn");
 
 let referralAddress;
 let generatedReferralLink;

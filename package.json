@@ -2,7 +2,6 @@
   "name": "sifi-finance",
   "version": "1.0.0",
   "description": "",
-  "main": "public/js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon ./bin/www",
@@ -24,5 +23,12 @@
   "devDependencies": {
     "parcel": "^2.7.0"
   },
-  "browserslist": "> 0.5%, last 5 versions, not dead"
+  "browserslist": "> 0.5%, last 5 versions, not dead",
+  "targets": {
+    "main": false,
+    "default": {
+      "context": "browser",
+      "distDir": "./public/js"
+    }
+  }
 }
