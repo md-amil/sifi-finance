@@ -2,10 +2,12 @@
   "name": "cifi-finance",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "public/js/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "watch": "parcel watch --no-hmr frontend/index.js",
+    "build": "parcel build frontend/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -18,5 +20,8 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.16",
     "web3": "^1.7.3"
+  },
+  "devDependencies": {
+    "parcel": "^2.7.0"
   }
 }
