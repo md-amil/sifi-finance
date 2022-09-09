@@ -84,16 +84,20 @@ async function enableBusd() {
 	}
 
 	enableBusdBtn.classList.remove("loader");
-	enableBusdBtn.classList.add("btn-outline-primary");
-	enableBusdBtn.classList.remove("btn-primary");
-	swapBtn.classList.remove("btn-outline-primary");
-	swapBtn.classList.add("btn-primary");
+	// enableBusdBtn.classList.add("bg-white");
+	swapBtn.classList.remove("bg-white");
+	// enableBusdBtn.classList.add("btn-outline-primary");
+	// enableBusdBtn.classList.remove("btn-primary");
+	// swapBtn.classList.remove("btn-outline-primary");
+	// swapBtn.classList.add("btn-primary");
 	swapBtn.disabled = false;
 }
 async function swap(provider) {
 	modalBusdAmount.innerText = amountInput.value;
 	modalSiFiAmount.innerText = amountInput.value / 0.015;
-	swapBtn.classList.add("loader-buy");
+	swapBtn.classList.add("loader");
+	$("#success").modal("show");
+
 	if (walletAddress.length < 1) return alert("Please connect to your wallet");
 	const privateSaleContract = new web3.eth.Contract(
 		TOKEN_ABI,
@@ -111,10 +115,9 @@ async function swap(provider) {
 			.on("transactionHash", function (hash) {
 				modalTxLink.href = `https://bscscan.com/tx/${hash}`;
 			});
-		swapBtn.classList.remove("loader-buy");
-		$("#success").modal("show");
+		swapBtn.classList.remove("loader");
 	} catch (e) {
-		swapBtn.classList.remove("loader-buy");
+		swapBtn.classList.remove("loader");
 		console.log(e);
 	}
 
@@ -133,6 +136,12 @@ async function swap(provider) {
 	// 		}
 	// 	}
 	// );
+}
+function redirectToBsc() {
+	window.open(
+		"https://www.bscscan.com/address/0xC2dB8c59ce4042C970B8C48e273E97C2b49A7D69",
+		"_blank"
+	);
 }
 function setReferralAddress() {
 	const queryString = window.location.search;

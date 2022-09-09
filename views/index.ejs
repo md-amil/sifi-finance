@@ -230,9 +230,9 @@
             <div class="montserrat-bold-cod-gray-55px">
               What is<br> SiFi?
             </div>
-            <p class="earn-referral-reward inter-normal-shark-16px my-3">
+            <!-- <p class="earn-referral-reward inter-normal-shark-16px my-3">
               I am super safe and no hidden fees
-            </p>
+            </p> -->
           </div>
           <div class="col-md-6 col-xs-12">
            <div class="shadow-box">
@@ -541,7 +541,7 @@ Audit
                 <label for="" class="d-flex justify-content-between">&nbsp;
                   <div class="amount-100">Sifi Token Contract</div>
                 </label>
-                <input type="number" class="sifi-input mt-1" readonly disabled placeholder="0xC2dB8c59ce4042C970B8C48e273E97C2b49A7D69">
+                <input type="number"  class="sifi-input mt-1" readonly disabled placeholder="0xC2dB8c59ce4042C970B8C48e273E97C2b49A7D69">
              
               </div>
             </div>
@@ -549,8 +549,8 @@ Audit
             <div class="group-4" style="align-items: center;
             justify-content: center;
             margin: auto;">
-              <button class="sifi-btn bg-white" >Copy</button>
-              <button class="sifi-btn mx-4" >Bscscan</button>
+              <button class="sifi-btn bg-white" onclick="copyTextToClipboard('0xC2dB8c59ce4042C970B8C48e273E97C2b49A7D69')" >Copy</button>
+              <button onclick="redirectToBsc()" class="sifi-btn mx-4" >Bscscan</button>
               <button class="sifi-btn bg-white qr">QR Code</button>
             
             </div>
