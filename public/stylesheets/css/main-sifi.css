@@ -1217,7 +1217,7 @@ margin-top: 10px;
 }
 .sticky-col.fixed .fixed-title {
   position: fixed;
-        top: 375px;
+        top: 200px;
 }
 .sticky-col.fixed .right-arrow:before {
   bottom: inherit;
