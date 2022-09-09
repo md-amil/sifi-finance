@@ -70,7 +70,6 @@ copyLinkBtn.addEventListener("click", () =>
 );
 
 async function enableBusd() {
-	console.log("called");
 	const amount = amountInput.value;
 	if (amount == "") return alert("Please enter amount ");
 	if (amount > 6250) return alert("Please enter amount less than 6250");
@@ -94,6 +93,7 @@ async function enableBusd() {
 async function swap(provider) {
 	modalBusdAmount.innerText = amountInput.value;
 	modalSiFiAmount.innerText = amountInput.value / 0.015;
+	swapBtn.classList.add("loader-buy");
 	if (walletAddress.length < 1) return alert("Please connect to your wallet");
 	const privateSaleContract = new web3.eth.Contract(
 		TOKEN_ABI,
@@ -111,8 +111,10 @@ async function swap(provider) {
 			.on("transactionHash", function (hash) {
 				modalTxLink.href = `https://bscscan.com/tx/${hash}`;
 			});
-		$("#success").modal();
+		swapBtn.classList.remove("loader-buy");
+		$("#success").modal("show");
 	} catch (e) {
+		swapBtn.classList.remove("loader-buy");
 		console.log(e);
 	}
 

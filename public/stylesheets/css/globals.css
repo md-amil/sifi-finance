@@ -67,6 +67,27 @@
   bottom: 0;
   background:var(--brandprimary)
 }
+.loader-buy {
+    position: relative;
+}
+.loader-buy:before {
+    content: "";
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 3px solid rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    border-top-color: #000;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    background:white
+}
 
 @keyframes spin {
   to { -webkit-transform: rotate(360deg); }
