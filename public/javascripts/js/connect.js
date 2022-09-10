@@ -1,5 +1,3 @@
-const { json } = require("express");
-
 let Web3Modal = window.Web3Modal.default;
 const connectBtn = document.getElementById("connect-btn");
 let walletAddress = [];
@@ -24,20 +22,14 @@ async function connect() {
 		connectBtn.innerText = wallet;
 		busdContract = new web3.eth.Contract(BUSD_ABI, BUSD_ADDRESS);
 
-		try {
-			busdBalance = await busdContract.methods
-				.balanceOf(walletAddress[0])
-				.call();
-			alert(JSON.stringify(busdBalance));
-			document.getElementById("wallet-balance").innerText =
-				"Balance: " +
-				Number(busdBalance / 10 ** 18).toFixed(3) +
-				" BUSD";
-			document.getElementById("connected-label").innerText = "";
-		} catch (e) {
-			alert(JSON.stringify(e));
-		}
-
+		busdBalance = await busdContract.methods
+			.balanceOf(walletAddress[0])
+			.call();
+		alert(busdBalance);
+		console.log("balc", busdBalance);
+		document.getElementById("wallet-balance").innerText =
+			"Balance: " + Number(busdBalance / 10 ** 18).toFixed(3) + " BUSD";
+		document.getElementById("connected-label").innerText = "";
 		// document.getElementById("address-link").placeholder = walletAddress[0];
 	}
 	// if (provider) {
