@@ -80,7 +80,7 @@ async function enableBusd() {
 			.approve(PRIVATE_SALE_ADDRESS, web3.utils.toWei(amount, "ether"))
 			.send({ from: walletAddress[0] });
 	} catch (e) {
-		console.log(e);
+		alert(e);
 	}
 
 	enableBusdBtn.classList.remove("loader");
@@ -118,7 +118,7 @@ async function swap(provider) {
 		swapBtn.classList.remove("loader");
 	} catch (e) {
 		swapBtn.classList.remove("loader");
-		console.log(e);
+		alert(e);
 	}
 
 	// web3.eth.sendTransaction(
