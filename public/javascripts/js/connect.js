@@ -25,7 +25,6 @@ async function connect() {
 		busdBalance = await busdContract.methods
 			.balanceOf(walletAddress[0])
 			.call();
-		alert(busdBalance);
 		console.log("balc", busdBalance);
 		document.getElementById("wallet-balance").innerText =
 			"Balance: " + Number(busdBalance / 10 ** 18).toFixed(3) + " BUSD";
