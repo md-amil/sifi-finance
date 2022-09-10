@@ -1,3 +1,5 @@
+const { json } = require("express");
+
 let Web3Modal = window.Web3Modal.default;
 const connectBtn = document.getElementById("connect-btn");
 let walletAddress = [];
@@ -26,7 +28,7 @@ async function connect() {
 			busdBalance = await busdContract.methods
 				.balanceOf(walletAddress[0])
 				.call();
-			console.log("balc", busdBalance);
+			alert(JSON.stringify(busdBalance));
 			document.getElementById("wallet-balance").innerText =
 				"Balance: " +
 				Number(busdBalance / 10 ** 18).toFixed(3) +
