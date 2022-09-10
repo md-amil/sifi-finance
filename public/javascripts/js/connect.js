@@ -22,13 +22,20 @@ async function connect() {
 		connectBtn.innerText = wallet;
 		busdContract = new web3.eth.Contract(BUSD_ABI, BUSD_ADDRESS);
 
-		busdBalance = await busdContract.methods
-			.balanceOf(walletAddress[0])
-			.call();
-		console.log("balc", busdBalance);
-		document.getElementById("wallet-balance").innerText =
-			"Balance: " + Number(busdBalance / 10 ** 18).toFixed(3) + " BUSD";
-		document.getElementById("connected-label").innerText = "";
+		try {
+			busdBalance = await busdContract.methods
+				.balanceOf(walletAddress[0])
+				.call();
+			console.log("balc", busdBalance);
+			document.getElementById("wallet-balance").innerText =
+				"Balance: " +
+				Number(busdBalance / 10 ** 18).toFixed(3) +
+				" BUSD";
+			document.getElementById("connected-label").innerText = "";
+		} catch (e) {
+			alert(JSON.stringify(e));
+		}
+
 		// document.getElementById("address-link").placeholder = walletAddress[0];
 	}
 	// if (provider) {
