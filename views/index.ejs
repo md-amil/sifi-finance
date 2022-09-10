@@ -279,7 +279,7 @@
   </section>
 
 
-  <section class="container-fluid por" style="background-color: #C3EAD8;">
+  <section class="container-fluid por" style="background-color: #C3EAD8;" id="features">
     <div class="row">
       <div class="container spacer">
         <div class="montserrat-bold-cod-gray-55px text-center mb-5">
@@ -344,7 +344,8 @@
                 </div>
                 <div class="swiper-slide" data-hash="slide1">
                   <div class="shadow-box text-center">
-                    <img src="./img/three.png"  alt=""> 
+                    <img src="./img/two.png"  alt="">
+                 
                     <p class="para">
                       Earn fixed ROI on your crypto holdings 
                       by lending through our P2P feature.
@@ -353,8 +354,7 @@
               </div>
               <div class="swiper-slide" data-hash="slide1">
                 <div class="shadow-box text-center">
-                 
-                  <img src="./img/two.png"  alt="">
+                  <img src="./img/three.png"  alt=""> 
                   <p class="para">
                     Invest in baskets that are
                     optimized for Low, Medium 
@@ -404,55 +404,72 @@
                 <li>
                   <h4>Q2 2022</h4>
                   <div class="tmbox">
-                    Concept Building
-                    Team Formation
-                    Logo Release
-                    Brand Guidelines and Theme
+                    <ul class="list-item">
+                      <li> Concept Building</li>
+                     <li> Team Formation</li>
+                     <li>Logo Release</li>
+                      <li> Brand Guidelines and Theme</li>
+                     
+                    </ul>
+                
                   </div>
                 </li>
                 <li>
                   <h4>Q3 2022</h4>
                   <div class="tmbox">
-                   
-Token development
-Website V1 Launch
-Whitepaper V1
-Private Sale Funding
-Press Release
-Audit
+                   <ul class="list-item">
+                     <li>Token development</li>
+                     <li>Website V1 Launch</li>
+                     <li>Whitepaper V1</li>
+                     <li>Private Sale Funding</li>
+                     <li>Press Release</li>
+                     <li>Audit</li>
+                   </ul>
+
                   </div>
                 </li>
                 <li>
                   <h4>Q4 2022</h4>
                   <div class="tmbox">
-                    Hyped Marketing Push
-                    Influencer Marketing
-                    Twitter Trending
-                    Community Giveaway Campaigns
-                    Coinmarketcap Airdrop Campaign
-                    Whitelist campaign
-                    Partnership Drive
-                    IDO
+                    <ul class="list-item">
+                        <li>Hyped Marketing Push</li>
+                        <li>Influencer Marketing</li>
+                        <li>Twitter Trending</li>
+                        <li>
+                          Community Giveaway Campaigns
+                        </li>
+                        <li>Coinmarketcap Airdrop Campaign</li>
+                        <li>Whitelist campaign</li>
+                        <li>Partnership Drive</li>
+                        <li>IDO</li>
+                    </ul>
+                    
                   </div>
                 </li>
                 <li>
                   <h4>Q2 2023</h4>
                   <div class="tmbox">
-                    Pancakeswap Listing
-                    Dextools Trending
-                    Celebrity Ambassador Campaign
-                    CEX Listing
-                    Beta App Launch
-                    NFT Collection Launch
+                    <ul class="list-item">
+                      <li>Pancakeswap Listing</li>
+                      <li>Dextools Trending</li>
+                      <li>Celebrity Ambassador Campaign</li>
+                      <li>CEX Listing</li>
+                      <li> Beta App Launch</li>
+                      <li>NFT Collection Launch</li>
+                    </ul>
+                    
                   </div>
                 </li>
                 <li>
                   <h4>Q1 2023</h4>
                   <div class="tmbox">
-                    SiFi Global Meetups
-                    Token Buy Back
-                    SiFi Army Campaign
-                    Digital Advertising Campaigns
+                    <ul class="list-item">
+                      <li>SiFi Global Meetups</li>
+                      <li>Token Buy Back</li>
+                      <li>SiFi Army Campaign</li>
+                      <li>Digital Advertising Campaigns</li>
+                    </ul>
+                    
                   </div>
                 </li>
               </ul>
@@ -551,8 +568,8 @@ Audit
             margin: auto;">
               <button class="sifi-btn bg-white" onclick="copyTextToClipboard('0xC2dB8c59ce4042C970B8C48e273E97C2b49A7D69')" >Copy</button>
               <button onclick="redirectToBsc()" class="sifi-btn mx-4" >Bscscan</button>
-              <button class="sifi-btn bg-white qr">QR Code</button>
-            
+              <button class="sifi-btn bg-white qr" data-toggle="modal" data-target="#qrscan">QR Code</button>
+             
             </div>
           </div>
    
@@ -565,13 +582,22 @@ Audit
   <section class="container-fluid por">
     <div class="row thr-col">
       <div class="col" style="background-color: #C3EAD8;">
-        BUY
+        
+        
+        <a class="page" href="#private-sale" style="color:var(--black)">
+          BUY
+        </a>
       </div>
       <div class="col" style="background-color: #FEF86B;">
-        ROADMAP
+         <a class="page" href="#Roadmap" style="color:var(--black)">
+          ROADMAP
+        </a>
+       
       </div>
       <div class="col" style="background-color: #C7D4F1;">
+        <a class="page" href="#Tokenomics" style="color:var(--black)">
         TOKENOMICS
+      </a>
       </div>
     </div>
 
@@ -579,10 +605,16 @@ Audit
   <section class="container-fluid por">
     <div class="row thr-col">
       <div class="col" style="background-color: #C7D4F1; height: 200px;">
+        
+        <a class="page" href="#about" style="color:var(--black)">
         UNDERSTAND SIFI
+        </a>
       </div>
         <div class="col" style="background-color: #C3EAD8; height: 200px;">
-          FEATURES
+          
+          <a class="page" href="#features" style="color:var(--black)">
+            FEATURES
+            </a>
       </div>
     </div>
   </section>
@@ -679,6 +711,26 @@ Audit
     </div>
   </div>
   
+  <!-- Button trigger modal -->
+
+  
+  <!-- Modal -->
+  <div class="modal fade" id="qrscan" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Sqan QR Code</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+          <img class="hero-img" src="./img/qr.jpeg" alt="">
+        </div>
+       
+      </div>
+    </div>
+  </div>
   <script>
     // $('#exampleModal').on('show.bs.modal', event => {
     //   var button = $(event.relatedTarget);

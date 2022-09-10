@@ -1082,7 +1082,7 @@ line-height: 1.6;
 text-align: center;
 color: #24262B;
 }
-.timeline-vr li {
+.timeline-vr > li {
   position: relative;
   padding: 80px 0;
 }
@@ -1230,4 +1230,8 @@ margin-top: 10px;
 }
 .rdmp .right-arrow {
   top: 240px;
+}
+.list-item li {
+  list-style: square;
+  text-align: left;
 }
