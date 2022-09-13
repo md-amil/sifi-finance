@@ -14,6 +14,7 @@ const modalTxLink = document.getElementById("modal-tx-link");
 const referrer = document.getElementById("referrer");
 let referralAddress;
 let generatedReferralLink;
+const CURRENT_SIFI_PRICE = 0.0175;
 
 $(".inv-button").hide();
 connectBtn.addEventListener("click", () => connect());
@@ -45,7 +46,7 @@ swapBtn.addEventListener("click", () => swap());
 amountInput.addEventListener("input", () => {
 	console.log("amount");
 	$(".buy-now").hide();
-	uGet.innerText = Number(amountInput.value / 0.015).toFixed(3);
+	uGet.innerText = Number(amountInput.value / CURRENT_SIFI_PRICE).toFixed(3);
 	$(".inv-button").show();
 });
 getLinkBtn.addEventListener("click", () => {
@@ -94,7 +95,7 @@ async function enableBusd() {
 }
 async function swap(provider) {
 	modalBusdAmount.innerText = amountInput.value;
-	modalSiFiAmount.innerText = amountInput.value / 0.015;
+	modalSiFiAmount.innerText = amountInput.value / 0.0175;
 	swapBtn.classList.add("loader");
 
 	if (walletAddress.length < 1) return alert("Please connect to your wallet");

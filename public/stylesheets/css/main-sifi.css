@@ -997,10 +997,13 @@ white-space: nowrap;
   box-shadow: -2px 2px 0px #000000;
 
 }
-tr.active {
+tr .active {
   background-color: var(--brandprimary);
 
 
+}
+#active-view-rates {
+    background-color: var(--brandprimary);
 }
 .shadow-box {
   border-radius: 10px;
