@@ -1238,3 +1238,61 @@ margin-top: 10px;
   list-style: square;
   text-align: left;
 }
+.shadow-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.shadow-list li{
+  padding: 24px 40px;
+  background: #fff;
+  border: 1px solid #000000;
+  box-shadow: 2px 2px 2px #000000;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-weight: 500;
+font-size: 16px;
+color: #24262B;
+}
+.shadow-list li.active {
+  background: #FEF86B;
+
+}
+
+.show-s-container li {
+  padding: 20px 30px;
+  width: 230px;
+  background: #fff;
+  border: 1px solid #000000;
+  box-shadow: 2px 2px 2px #000000;
+  border-radius: 4px;
+  text-align: center;
+  margin-top: 30px;
+}
+.show-s-container li.active {
+  background: #FEF86B;
+}
+.show-s-container {
+  display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-right: 10px;
+        margin-bottom: 30px;
+}
+.gallery-top, .gallery-top .swiper-wrapper, .gallery-top .shadow-box {
+  height: 85%;
+}
+.sifi-light {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.sifi-light {
+  position: absolute;
+  left: -500px;
+  bottom: -180px;
+  opacity: .3;
+  width: 990px;
+  filter: grayscale(1);
+}

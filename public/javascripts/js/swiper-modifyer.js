@@ -53,6 +53,52 @@ $('a.page').click(function(){
     galleryTop.on('slideChange', function () {
       $('.show-s-container .show-s').removeClass('active').eq(this.activeIndex).addClass('active')
     });
+// gallery 2
+
+
+var galleryTop2 = new Swiper('.gallery-top2', {
+  spaceBetween: 10,
+  slidesPerView: 1,
+  // centeredSlides:true,
+  // width: "full",
+  hashNav:true,
+   autoplay: {
+      delay: 3000,
+    },
+
+   breakpoints: {
+   
+        640: {
+        //  width: 170,
+          spaceBetween: 0,
+          slidesPerView: 1,
+        
+        },
+
+        360: {
+          // width: 170,
+          spaceBetween: 0,
+          slidesPerView: 1,
+         
+        },
+
+         320: {
+          // width: 150,
+          spaceBetween: 0,
+          slidesPerView: 1,
+          
+         
+        }
+  },
+  slideChange: function() {
+    console.log(this);
+  }
+
+});
+
+galleryTop2.on('slideChange', function () {
+  $('.shadow-list .show-s').removeClass('active').eq(this.activeIndex).addClass('active')
+});
 
 
 
