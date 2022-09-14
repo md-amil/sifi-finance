@@ -15,6 +15,7 @@ $('a.page').click(function(){
       slidesPerView: 1,
       // centeredSlides:true,
       // width: "full",
+
       hashNav:true,
        autoplay: {
           delay: 3000,
@@ -98,6 +99,54 @@ var galleryTop2 = new Swiper('.gallery-top2', {
 
 galleryTop2.on('slideChange', function () {
   $('.shadow-list .show-s').removeClass('active').eq(this.activeIndex).addClass('active')
+});
+
+var galleryTop3 = new Swiper('.gallery-top3', {
+  spaceBetween: 10,
+  slidesPerView: 1,
+  // centeredSlides:true,
+  // width: "full",
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  hashNav:true,
+   autoplay: {
+      delay: 3000,
+    },
+
+   breakpoints: {
+   
+        640: {
+        //  width: 170,
+          spaceBetween: 0,
+          slidesPerView: 1,
+        
+        },
+
+        360: {
+          // width: 170,
+          spaceBetween: 0,
+          slidesPerView: 1,
+         
+        },
+
+         320: {
+          // width: 150,
+          spaceBetween: 0,
+          slidesPerView: 1,
+          
+         
+        }
+  },
+  slideChange: function() {
+    console.log(this);
+  }
+
+});
+
+galleryTop3.on('slideChange', function () {
+  $('.gallery-top3 .list-item li').removeClass('active').eq(this.activeIndex).addClass('active')
 });
 
 
