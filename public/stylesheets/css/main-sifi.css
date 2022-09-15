@@ -1346,3 +1346,17 @@ color: #24262B;
 .gallery-top3 .swiper-button-next {
   margin-right: -10px;
 }
+.round-list li{
+  border: 1px dashed;
+  padding: 10px 50px;
+  border-radius: 4px;
+  font-weight: bold;
+  margin: 15px;
+}
+.round-list li .btn {
+  background: #0D8736;
+border-radius: 20px;
+color: #fff;
+margin-left: 30px;
+
+}
