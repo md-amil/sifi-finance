@@ -146,7 +146,7 @@ var galleryTop3 = new Swiper('.gallery-top3', {
 });
 
 galleryTop3.on('slideChange', function () {
-  $('.gallery-top3 .list-item li').removeClass('active').eq(this.activeIndex).addClass('active')
+  $('.gallery-top3  li').removeClass('active').eq(this.activeIndex).addClass('active')
 });
 
 

@@ -7,9 +7,13 @@
   top: 0;
   width: 1440px;
   z-index: -1;
+
 }
 li.show-s:hover {
   cursor: pointer;
+}
+a.sifi-btn {
+  color: #333;
 }
 
 .vector {
@@ -1146,7 +1150,8 @@ color: #24262B;
   margin-bottom: 20px;
 }
 .l-text{
-  background: #FEF86B;
+  border: 1px dashed #7e7e7e;
+  
         border-radius: 10px;
         font-size: 16px;
         text-align: center;
@@ -1159,15 +1164,26 @@ color: #24262B;
 }
 .l-text:before {
   content: "";
-  border: 1px dashed #7e7e7e;
   width: 100%;
   height: 100%;
   position: absolute;
   left: 0;
   top: 0;
-  transform: rotate(6deg);
+  transform: rotate(0deg);
   z-index: -1;
   border-radius: 10px;
+  background: #FEF86B;
+  -webkit-animation: cycle 10s infinite linear;
+}
+
+@-webkit-keyframes cycle {
+  0%   {  transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+.l-text.no-dot:before  {
+  content: none;
 }
 .attach-token {
   margin: 0;
@@ -1276,7 +1292,10 @@ color: #24262B;
   background: #FEF86B;
 
 }
+.shadow-list li:hover {
+  background: #FEF86B;
 
+}
 .show-s-container li {
   padding: 20px 30px;
   width: 230px;
@@ -1287,6 +1306,7 @@ color: #24262B;
   text-align: center;
   margin-bottom: 30px;
   cursor: pointer;
+  margin-right: 30px;
 }
 .show-s-container li.active {
   background: #FEF86B;
@@ -1294,7 +1314,6 @@ color: #24262B;
 .show-s-container {
   display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
         padding-right: 10px;
         margin-bottom: 30px;
 }
@@ -1308,18 +1327,19 @@ color: #24262B;
 }
 .sifi-light {
   position: absolute;
-  left: -500px;
-  bottom: -180px;
-  opacity: .3;
-  width: 990px;
-  filter: grayscale(1);
+        left: -585px;
+        bottom: -240px;
+        opacity: .3;
+        width: 990px;
+        filter: grayscale(1);
+
 }
 .gallery-top3 {
   width: 50%;
   margin: auto;
 }
 .gallery-top3 .swiper-slide {
-  padding: 30px;
+  padding: 50px;
 }
 .gallery-top3 .list-item li {
   padding: 15px 0;
@@ -1332,13 +1352,13 @@ color: #24262B;
   padding: 20px;
 }
 .gallery-top3 .swiper-button-prev, .gallery-top3 .swiper-button-next {
-  top: 80px;
+  top: 81px;
   background-size: 15px;
   background-color: #fff;
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  --swiper-color: red;
+  
 }
 .gallery-top3 .swiper-button-prev {
   margin-left: -10px;
@@ -1354,9 +1374,32 @@ color: #24262B;
   margin: 15px;
 }
 .round-list li .btn {
-  background: #0D8736;
+  background: none;
 border-radius: 20px;
-color: #fff;
+color: red;
 margin-left: 30px;
 
+}
+
+.bg-white:hover {
+  background-color: var(--brandprimary) !important;
+}
+.float-icon {
+  --size: 78px;
+  width: var(--size);
+  height: var(--size);
+  color: #fff;
+  background: #003629;
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+  border-radius: 50%;
+  text-align: center;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 15px #0000004d;
+}
+.float-icon:hover {
+  color: #fff !important;
 }
