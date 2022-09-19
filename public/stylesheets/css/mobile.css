@@ -295,4 +295,24 @@ h4.bold.m-0 {
 .group-4 a.sifi-btn-outline.ml-3.htb{
     margin-left: 0 !important;
   }
+
+  .l-text {
+ 
+ 
+    padding: 5px 12px;
+ 
+}
+.token-row {
+    flex-wrap: NOWRAP;
+  }
+  .l-text h4 {
+    font-size: 24px;
+  
+}
+.yt-sifi {
+    border-radius: 4px !important;
+}
+.mmpaper {
+    margin-bottom: 25px;
+}
 }
