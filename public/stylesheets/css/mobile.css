@@ -234,4 +234,62 @@ h4.bold.m-0 {
 .group-4 .mx-4{
     margin-right: 0 !important;
 }
+
+.sold-container {
+    margin: auto;
+    width: 90% !important;
+    text-align: center;
+  }
+  .sold-container > button {
+      margin-left: 0 !important;
+  }
+  .round-list li {
+
+    padding: 10px 8px;
+    margin: 15px;
+  }
+  .round-list li .btn {
+      padding: 0;
+  }
+
+  .show-s-container li {
+    padding: 20px 7px;
+    width: 147px;
+    background: #fff;
+    border: 1px solid #000000;
+    box-shadow: 2px 2px 2px #000000;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-left: 10px;
+    align-items: center;
+        display: flex;
+        justify-content: center;
+}
+.sifi-light {
+    display: none;
+}
+.wasf {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.gallery-top3 {
+    width: 100%;
+    margin: auto;
+}
+.sfwp {
+        margin-bottom: 40px;
+        margin-top: 15px !important;
+}
+.token-row .col{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.attach-token li {
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 50px;
+}
 }

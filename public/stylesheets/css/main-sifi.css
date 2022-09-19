@@ -1399,7 +1399,30 @@ margin-left: 30px;
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 15px #0000004d;
+  z-index: 100;
 }
 .float-icon:hover {
   color: #fff !important;
+}
+.dot {
+  position: relative;
+  left: 14px;
+}
+.dot:before {
+  content: "";
+  --size: 10px;
+  width: var(--size);
+  height: var(--size);
+  background: #23252a;
+  position: absolute;
+  left: -14px;
+  top: 7px;
+  border-radius: 50%;
+}
+.no-dot {
+  background: #fef86b;
+        border: none;
+}
+.group-4 a.sifi-btn-outline.ml-3.htb{
+  margin-left: 0 !important;
 }
