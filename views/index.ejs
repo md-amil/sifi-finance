@@ -188,8 +188,19 @@
              
             </div>
             <div class="col-md-6">
-              <iframe class="yt-sifi" style="width: 100%;
-              border-radius: 30px 4px;" height="350" src="https://www.youtube.com/embed/k_NPAVvhvWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <!-- <iframe class="yt-sifi" style="width: 100%;
+              border-radius: 30px 4px;" height="350" src="https://www.youtube.com/embed/k_NPAVvhvWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+              <div class="videoCoverImage">
+                <div onclick="thevid=document.getElementById('thevideo'); thevid.style.display='block'; this.style.display='none'">
+                  <img style="width: 100%;
+                  border-radius: 30px 4px; box-shadow: 0 0 10px #0000002b;" class="thumb" style="cursor: pointer;" src="./img/Video_Thumbnail4.png">
+                </div>
+                <div id="thevideo" style="display: none;">
+                  <iframe  style="width: 100%;
+                  border-radius: 30px 4px;" height="350" src="https://www.youtube.com/embed/k_NPAVvhvWo" frameborder="0" allowfullscreen="" include=""></iframe>
+                </div>
+              </div>
+           
             </div>
           </div>
   
