@@ -1161,6 +1161,7 @@ color: #24262B;
         /* width: 210px; */
         margin-top: 10px;
         position: relative;
+
 }
 .l-text:before {
   content: "";
@@ -1169,7 +1170,7 @@ color: #24262B;
   position: absolute;
   left: 0;
   top: 0;
-  transform: rotate(0deg);
+  transform: rotate(10deg);
   z-index: -1;
   border-radius: 10px;
   background: #FEF86B;
@@ -1187,10 +1188,13 @@ color: #24262B;
 }
 
 @-webkit-keyframes cycle {
-  0%   {  transform: rotate(0deg); }
+  0%   {  transform: rotate(10deg); }
   100% { transform: rotate(360deg); }
 }
 
+.sifi-input::placeholder {
+  color: #000;
+}
 
 .l-text.no-dot:before  {
   content: none;
