@@ -1161,6 +1161,7 @@ color: #24262B;
         /* width: 210px; */
         margin-top: 10px;
         position: relative;
+        transform: rotate(10deg);
 
 }
 .l-text:before {
@@ -1170,13 +1171,16 @@ color: #24262B;
   position: absolute;
   left: 0;
   top: 0;
-  transform: rotate(10deg);
+
   z-index: -1;
   border-radius: 10px;
   background: #FEF86B;
+  transform: rotate(-10deg);
+  transition: all .3s;
 }
 .l-text:hover::before {
-  -webkit-animation: cycle 10s infinite linear;
+  transform: rotate(0deg);
+
 
 }
 .main-sifi.screen {
@@ -1187,10 +1191,6 @@ color: #24262B;
   width: 100%;
 }
 
-@-webkit-keyframes cycle {
-  0%   {  transform: rotate(10deg); }
-  100% { transform: rotate(360deg); }
-}
 
 .sifi-input::placeholder {
   color: #000;
@@ -1438,6 +1438,8 @@ color: #fff;
 .no-dot {
   background: #fef86b;
         border: none;
+  transform: rotate(0deg);
+
 }
 .sold-container {
   text-align: center;
