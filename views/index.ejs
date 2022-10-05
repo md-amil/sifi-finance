@@ -522,15 +522,16 @@
   </section>
 
 
-  <section class="container-fluid por" style="background-color: #C3EAD8; z-index: 100;" id="Tokenomics">
+  <section class="container-fluid token-c por" style="background-color: #C3EAD8; z-index: 100;" id="Tokenomics">
     <div class="row">
       <div class="container spacer">
         <div class="montserrat-bold-cod-gray-55px text-center mb-5">
           Tokenomics
         </div>
+
         <div class="row align-items-center token-row">
           <div class="col text-center">
-            <div class="l-text">
+            <div class="l-text " data-tilt-scale="1.2" data-tilt data-tilt-glare="true" data-tilt-max="30">
              <h4>1 bn</h4>
              <span>Total Supply</span>
             </div>
@@ -541,48 +542,49 @@
              <span>Network</span>
             </div>
           </div>
-          <div class="col text-center">
-            <div class="l-text">
+          <div class="col text-center" >
+            <div class="l-text" data-tilt-scale="1.2" data-tilt data-tilt-glare="true" data-tilt-max="30">
              <h4>2%</h4>
              <span>Tax</span>
             </div>
           </div>
         </div>
+
         <ul class="attach-token mt-5">
-          <li>
+          <li class="rellax" data-rellax-speed="4">
             <span>Token Sale</span>
             <button class="sifi-btn">220 M</button>
           </li>
-          <li>
+          <li class="rellax" data-rellax-speed="6">
             <span>Liquidity</span>
             <button class="sifi-btn">80 M</button>
           </li>
-          <li>
+          <li class="rellax" data-rellax-speed="4">
             <span>Development</span>
             <button class="sifi-btn">30 M</button>
           </li>
-          <li>
+          <li class="rellax" data-rellax-speed="6">
             <span>Staking Rewards</span>
             <button class="sifi-btn">80 M</button>
           </li>
-          <li>
+          <li class="rellax" data-rellax-speed="4">
             <span>Airdop</span>
             <button class="sifi-btn">20 M</button>
           </li>
-          <li>
+          <li class="rellax" data-rellax-speed="6">
             <span>Marketing & Partnerships</span>
             <button class="sifi-btn">120 M</button>
           </li>
-          <li>
+          <li class="rellax" data-rellax-speed="4" >
             <span>Ecosystem 
               Development</span>
             <button class="sifi-btn">80 M</button>
           </li>
-          <li>
+          <li class="rellax" data-rellax-speed="4">
             <span>DAO/Reserve</span>
             <button class="sifi-btn">250 M</button>
           </li>
-          <li>
+          <li class="rellax" data-rellax-speed="6">
             <span>Team & Advisors</span>
             <button class="sifi-btn">40 M</button>
           </li>
@@ -804,10 +806,24 @@
     <script type="text/javascript" src="/javascripts/js/swiper.min.js"></script>
     <script type="text/javascript" src="/javascripts/js/swiper-modifyer.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.0/tilt.jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+
+    <script>
+      // Center all the things!
+      // var rellax = new Rellax('.rellax', {
+      //   center: true,
+      // });
+    </script>
+
+
     <script>
 
      
-  
+$('.js-tilt').tilt({
+    scale: 1.2
+})
+
 $(window).scroll(function(){
 	var sticky = $('.sticky-col'),
 		scroll = $(window).scrollTop();
