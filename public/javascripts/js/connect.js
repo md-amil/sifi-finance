@@ -4,6 +4,7 @@ let walletAddress = [];
 let web3, provider, web3Modal;
 let busdBalance;
 let busdContract;
+let chainId;
 
 async function connect() {
 	web3Modal = new Web3Modal({
@@ -20,7 +21,8 @@ async function connect() {
 			"..." +
 			walletAddress[0].substr(walletAddress[0].length - 4);
 		connectBtn.innerText = wallet;
-		busdContract = new web3.eth.Contract(BUSD_ABI, BUSD_ADDRESS);
+		chainId = await web3.eth.getChainId()
+		busdContract = new web3.eth.Contract(getBusdABI(chainId), getBusdToken(chainId));
 
 		busdBalance = await busdContract.methods
 			.balanceOf(walletAddress[0])

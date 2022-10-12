@@ -75,7 +75,7 @@ async function enableBusd() {
     if (walletAddress.length < 1) return alert("Please connect to your wallet");
     try {
         $("#enable-busd").addClass("loader");
-        const res = await busdContract.methods.approve(PRIVATE_SALE_ADDRESS, web3.utils.toWei(amount, "ether")).send({ from: walletAddress[0] });
+        const res = await busdContract.methods.approve(getPrivateSaleToken(chainId), web3.utils.toWei(amount, "ether")).send({ from: walletAddress[0] });
     } catch (e) {
         alert(e);
     }
@@ -93,9 +93,8 @@ async function swap(provider) {
     modalBusdAmount.innerText = amountInput.value;
     modalSiFiAmount.innerText = amountInput.value / CURRENT_SIFI_PRICE;
     swapBtn.classList.add("loader");
-
     if (walletAddress.length < 1) return alert("Please connect to your wallet");
-    const privateSaleContract = new web3.eth.Contract(TOKEN_ABI, PRIVATE_SALE_ADDRESS);
+    const privateSaleContract = new web3.eth.Contract(getPrivateSaleABI(chainId), getPrivateSaleToken(chainId));
     try {
         const res = await privateSaleContract.methods
             .buy(referralAddress || REFERRAL_ADDRESS, web3.utils.toWei(amountInput.value, "ether"))
