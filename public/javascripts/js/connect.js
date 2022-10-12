@@ -23,7 +23,16 @@ async function connect() {
 			walletAddress[0].substr(walletAddress[0].length - 4);
 		connectBtn.innerText = wallet;
 		chainId = await web3.eth.getChainId()
+		console.log(chainId)
+		provider.on("networkChanged", async function() {
+			// console.log('networkChanged', network);
+			window.location.reload()
 
+			// Time to reload your interface with accounts[0]!
+			// accounts = await web3.eth.getAccounts();
+			// accounts = await web3.eth.getAccounts();
+			console.log(accounts);
+		  });
 		showTokenInput.placeholder = getPrivateSaleToken(chainId)
 		busdContract = new web3.eth.Contract(getBusdABI(chainId), getBusdToken(chainId));
 		busdBalance = await busdContract.methods
