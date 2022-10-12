@@ -5,6 +5,7 @@ let web3, provider, web3Modal;
 let busdBalance;
 let busdContract;
 let chainId;
+let showTokenInput = document.getElementById("sifi-token-contract-input")
 
 async function connect() {
 	web3Modal = new Web3Modal({
@@ -22,8 +23,9 @@ async function connect() {
 			walletAddress[0].substr(walletAddress[0].length - 4);
 		connectBtn.innerText = wallet;
 		chainId = await web3.eth.getChainId()
-		busdContract = new web3.eth.Contract(getBusdABI(chainId), getBusdToken(chainId));
 
+		showTokenInput.placeholder = getPrivateSaleToken(chainId)
+		busdContract = new web3.eth.Contract(getBusdABI(chainId), getBusdToken(chainId));
 		busdBalance = await busdContract.methods
 			.balanceOf(walletAddress[0])
 			.call();
