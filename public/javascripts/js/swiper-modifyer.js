@@ -205,16 +205,20 @@ var swiper = new Swiper(".swiperRoadmap", {
   autoplay: {
     delay: 3000,
   },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+    clickable: true,
 
+  },
 	speed: 600,
 	// freeMode: true,
 	slidesPerView: 1,
 	spaceBetween: 50,
 	grabCursor: true,
-	slidesPerView: 4,
+	slidesPerView: 3,
 	breakpoints: {
 		1900: {
-			slidesPerView: 4,
+			slidesPerView: 3,
 			spaceBetween: 50,
 		 },
 
