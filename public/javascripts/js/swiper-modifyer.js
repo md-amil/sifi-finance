@@ -189,7 +189,54 @@ galleryTop3.on('slideChange', function () {
 
     });
 
+//  swiper road map
+
  
+var swiper = new Swiper(".swiperRoadmap", {
+	navigation: {
+	  nextEl: ".swiper-button-next",
+	  prevEl: ".swiper-button-prev",
+	},
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  loop:true,
+  autoplay: {
+    delay: 3000,
+  },
+
+	speed: 600,
+	// freeMode: true,
+	slidesPerView: 1,
+	spaceBetween: 50,
+	grabCursor: true,
+	slidesPerView: 4,
+	breakpoints: {
+		1900: {
+			slidesPerView: 4,
+			spaceBetween: 50,
+		 },
+
+		1400: {
+			slidesPerView: 4,
+			spaceBetween: 50,
+		 },
+		 1200: {
+			slidesPerView: 3,
+			spaceBetween: 20,
+		 },
+		 900: {
+			slidesPerView: 2,
+			spaceBetween: 10,
+		 },
+
+		 320: {
+			slidesPerView: 1,
+			spaceBetween: 10,
+		 },
+	   }
+  });
 
 
 
