@@ -95,3 +95,15 @@
 @-webkit-keyframes spin {
   to { -webkit-transform: rotate(360deg); }
 }
+
+.network-label {
+  --color: #003629;
+  color: var(--color);
+  border: 1px solid var(--color);
+  padding: 0.25rem 0.5rem;
+  font-size: small;
+  border-radius: 1rem;
+  display: inline-block;
+  font-family: sans-serif !important;
+  margin: 0 0.5rem;
+}
