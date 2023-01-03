@@ -14,7 +14,8 @@ const modalTxLink = document.getElementById("modal-tx-link");
 const referrer = document.getElementById("referrer");
 let referralAddress;
 let generatedReferralLink;
-const CURRENT_SIFI_PRICE = 1 / 57.14;
+
+const CURRENT_SIFI_PRICE = 0.02;
 
 $(".inv-button").hide();
 connectBtn.addEventListener("click", () => connect());
